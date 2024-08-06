@@ -33,27 +33,29 @@ To install the required dependencies and run the application, follow these steps
 
 ```
 Store/
-└── store_backend/
-   ├── config/ 
-   │   ├── __init__.py
-   │   └── asgi.py
-   │   └── settings.py
-   │   └── urls.py
-   │   └── wsgi.py
-   │
-   ├── users/
-   │   ├── migrations/
-   │   │   └── __init__.py
-   │   │
-   │   ├── __init__.py
-   │   └── models.py
-   │   └── admin.py
-   │   └── tests.py
-   │   └── views.py
-   │   └── apps.py
-   │
-   ├── manage.py
-   ├── requirements.txt
-   ├── .gitignore
-   └── README.md
+│└── store_backend/
+│   ├── config/ 
+│   │   ├── __init__.py
+│   │   └── asgi.py
+│   │   └── settings.py
+│   │   └── urls.py
+│   │   └── wsgi.py
+│   │
+│   ├── users/
+│   │   ├── migrations/
+│   │   │   └── __init__.py
+│   │   │
+│   │   ├── __init__.py
+│   │   └── models.py
+│   │   └── admin.py
+│   │   └── tests.py
+│   │   └── views.py
+│   │   └── apps.py
+│   │
+│   ├── manage.py
+│   └── requirements.txt
+│
+├── .gitignore
+└── README.md
+
 ```
