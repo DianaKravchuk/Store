@@ -28,3 +28,31 @@ To install the required dependencies and run the application, follow these steps
 ```bash
     pip install -r requirements.txt
 ```
+
+## Project Structure
+
+```
+Store/
+├── config/ 
+│   ├── __init__.py
+│   └── asgi.py
+│   └── settings.py
+│   └── urls.py
+│   └── wsgi.py
+│
+├── users/
+│   ├── migrations/
+│   │   └── __init__.py
+│   │
+│   ├── __init__.py
+│   └── models.py
+│   └── admin.py
+│   └── tests.py
+│   └── views.py
+│   └── apps.py
+│
+├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
