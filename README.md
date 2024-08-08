@@ -52,6 +52,28 @@ Store/
 │   │   └── views.py
 │   │   └── apps.py
 │   │
+│   ├── orders/
+│   │   ├── migrations/
+│   │   │   └── __init__.py
+│   │   │
+│   │   ├── __init__.py
+│   │   └── models.py
+│   │   └── admin.py
+│   │   └── tests.py
+│   │   └── views.py
+│   │   └── apps.py
+│   │
+│   ├── products/
+│   │   ├── migrations/
+│   │   │   └── __init__.py
+│   │   │
+│   │   ├── __init__.py
+│   │   └── models.py
+│   │   └── admin.py
+│   │   └── tests.py
+│   │   └── views.py
+│   │   └── apps.py
+│   │
 │   ├── manage.py
 │   └── requirements.txt
 │
