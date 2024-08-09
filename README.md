@@ -14,7 +14,7 @@ The project is organized into several branches to facilitate efficient developme
   
 - **Frontend:** [frontend](https://github.com/DianaKravchuk/Store/tree/frontend)
   - Contains the code related to the client-side of the application.
-  - Main technologies: React, Redux, Bootstrap.
+  - Main technologies: React, Typescript, Redux, Tailwind.
 
 - **Development:** [development](https://github.com/DianaKravchuk/Store/tree/development)
   - Main branch for integrating and testing new features.
@@ -23,7 +23,7 @@ The project is organized into several branches to facilitate efficient developme
 ## Key Technologies
 
 - **Backend:** Django, Django REST Framework, PostgreSQL
-- **Frontend:** React, Redux, Bootstrap
+- **Frontend:** React, Typescript, Redux, Tailwind
 - **DevOps:** Docker, Docker Compose, Git
 
 ## Installation and Setup
