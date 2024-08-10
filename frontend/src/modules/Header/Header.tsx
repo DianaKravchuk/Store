@@ -1,28 +1,36 @@
 import { Link } from "react-router-dom";
-import { categoryLinks } from "./lib/data"
-import { HiOutlineUser } from "react-icons/hi2";
-import { IoCartOutline } from "react-icons/io5";
+import { categoryLinks, navigationLinks } from "./lib/data";
+import { useState } from "react";
 
 const Header: React.FC = () => {
-  return (
-    <div className="w-[1032px] h-11 flex items-center justify-between mt-7">
-        <span className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest">SHADE.</span>
-        <div className="w-[385px] flex items-center justify-around">
-            {categoryLinks.map((link, index) => (
-                <span className="font-inter text-black" key={index}>{link.label}</span>
-            ))}
-        </div>
-        {/* Sign In and Log In buttons in future */}
-        <div className="w-24 flex items-center justify-between">
-            <Link to={"#"}>
-                <HiOutlineUser className="size-9 p-1"/>
-            </Link>
-            <Link to={"#"}>
-                <IoCartOutline className="size-9 p-1" />
-            </Link>
-        </div>
-    </div>
-  )
-}
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-export default Header
+  return (
+    <div className="w-[1032px] h-11 flex items-center justify-between mt-7 pt-[60px] pb-[168px]">
+      <span className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest">SHADE.</span>
+      <div className="w-[385px] flex items-center justify-around">
+        {categoryLinks.map((link, index) => (
+          <span className="font-inter text-black" key={index}>{link.label}</span>
+        ))}
+      </div>
+      {/* Sign In and Log In buttons in future */}
+      <div className="w-[156px] flex items-center gap-6">
+        {navigationLinks.map((item, index) => (
+          <Link
+            to={item.link}
+            key={item.id}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            className={`size-9 p-1 flex items-center justify-center rounded-full ${
+              hoveredIndex === index ? 'bg-[#E0E0E029]' : "bg-transparent"
+            }`}
+          >
+            <item.icon className="size-6" />
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Header;
