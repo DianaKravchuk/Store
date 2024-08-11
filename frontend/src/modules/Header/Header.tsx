@@ -7,10 +7,17 @@ const Header: React.FC = () => {
 
   return (
     <div className="w-[1032px] h-11 flex items-center justify-between mt-7 pt-[60px] pb-[64px]">
-      <Link to={"/"} className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest">SHADE.</Link>
+      <Link
+        to={"/"}
+        className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest"
+      >
+        SHADE.
+      </Link>
       <div className="w-[385px] flex items-center justify-around">
         {categoryLinks.map((link, index) => (
-          <span className="font-inter text-black" key={index}>{link.label}</span>
+          <span className="font-inter text-black" key={index}>
+            {link.label}
+          </span>
         ))}
       </div>
       {/* Sign In and Log In buttons in future */}
@@ -22,7 +29,7 @@ const Header: React.FC = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
             className={`size-9 p-1 flex items-center justify-center rounded-full ${
-              hoveredIndex === index ? 'bg-[#E0E0E029]' : "bg-transparent"
+              hoveredIndex === index ? "bg-[#E0E0E029]" : "bg-transparent"
             }`}
           >
             <item.icon className="size-6" />
