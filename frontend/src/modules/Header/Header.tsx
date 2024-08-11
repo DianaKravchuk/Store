@@ -6,8 +6,8 @@ const Header: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-[1032px] h-11 flex items-center justify-between mt-7 pt-[60px] pb-[168px]">
-      <span className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest">SHADE.</span>
+    <div className="w-[1032px] h-11 flex items-center justify-between mt-7 pt-[60px] pb-[64px]">
+      <Link to={"/"} className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest">SHADE.</Link>
       <div className="w-[385px] flex items-center justify-around">
         {categoryLinks.map((link, index) => (
           <span className="font-inter text-black" key={index}>{link.label}</span>
