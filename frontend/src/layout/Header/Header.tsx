@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-[1032px] h-11 flex items-center justify-between mt-7 pt-[60px] pb-[64px]">
+    <header className="w-[1032px] h-11 flex mx-auto items-center justify-between pt-[60px] pb-[64px]">
       <Link
         to={"/"}
         className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest"
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </header>
   );
 };
 
