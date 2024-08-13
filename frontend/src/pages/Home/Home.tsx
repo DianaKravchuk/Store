@@ -1,14 +1,14 @@
-import Header from "../../modules/Header";
+import Advantages from "../../modules/Advantages/Advantages";
 import NewCollection from "../../modules/NewCollection";
 import SaleProducts from "../../modules/SaleProducts/SaleProducts";
 
 const Home: React.FC = () => {
   return (
-    <div className="w-full flex flex-col items-center absolute">
-      <Header />
+    <>
+      <Advantages />
       <NewCollection />
       <SaleProducts />
-    </div>
+    </>
   );
 };
 
