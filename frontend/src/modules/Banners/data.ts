@@ -2,7 +2,15 @@ import banner1 from "./TemporaryBannerImages/banner1.png";
 import banner2 from "./TemporaryBannerImages/banner2.png";
 import banner3 from "./TemporaryBannerImages/banner3.png";
 
-export const BannersData = [
+interface Banner {
+  id: number;
+  outlineText?: string;
+  filledText: string;
+  salePercent?: number;
+  backgroundImage: string;
+}
+
+export const BannersData: Banner[] = [
   {
     id: 1,
     outlineText: "Summer",

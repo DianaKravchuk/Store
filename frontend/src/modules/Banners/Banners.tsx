@@ -17,14 +17,6 @@ const Banners: React.FC = () => {
     swiperRef.current?.slidePrev();
   };
 
-  interface Banner {
-    id: number;
-    outlineText?: string;
-    filledText: string;
-    salePercent?: number;
-    backgroundImage: string;
-  }
-
   return (
     <div className="w-full h-full flex items-center justify-center overflow-hidden">
       <Swiper
@@ -35,7 +27,7 @@ const Banners: React.FC = () => {
         loop={true}
         speed={700}
       >
-        {BannersData.map((banner: Banner) => (
+        {BannersData.map((banner) => (
           <SwiperSlide
             className="w-full h-full flex items-center justify-center"
             key={banner.id}
