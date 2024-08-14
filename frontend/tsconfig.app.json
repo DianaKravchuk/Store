@@ -27,7 +27,7 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@ui/*": ["./src/ui/*"],
-      "@page/*": ["./src/pages/*"],
+      "@pages/*": ["./src/pages/*"],
       "@modules/*": ["./src/modules/*"],
       "@assets/*": ["./src/assets/*"],
     }
