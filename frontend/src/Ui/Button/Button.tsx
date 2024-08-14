@@ -13,20 +13,24 @@ const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "flex items-center justify-center gap-[15px] rounded-3xl leading-6";
+    "flex items-center  gap-[15px] rounded-3xl leading-6 transition-all duration-300 group";
 
   const variantStyles = {
     primary:
-      "bg-black text-white focus:bg-[#181818] hover:bg-[#474747] disabled:bg-[#8b8b8b] disabled:text-[#59595a]",
-    secondary: "",
-    tertiary: "",
+      "bg-black text-white focus:bg-[#181818] hover:bg-[#474747] active:bg-[#575757] disabled:bg-[#8b8b8b] disabled:text-[#59595a] justify-center",
+    secondary:
+      "bg-transparent text-black focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] justify-center",
+    secondaryLeft:
+      "bg-transparent text-black focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] justify-start",
+    tertiary:
+      "bg-transparent text-black border-black border focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] disabled:border-[#616062] justify-center",
   };
 
   const sizeStyles = {
-    s: "px-3 py-[2px] text-xs",
+    s: "px-3 py-[2px] text-xs gap-[5px]",
     m: "px-6 py-2.5 text-md",
     l: "",
-    full: "w-full py-2.5 text-md",
+    full: "w-full py-2.5 p-6 text-md",
   };
   const position = {
     left: "flex-row",

@@ -1,4 +1,4 @@
-export type Variant = "primary" | "secondary" | "tertiary";
+export type Variant = "primary" | "secondary" | "secondaryLeft" | "tertiary";
 export type Sizes = "s" | "m" | "l" | "full";
 export type Position = "left" | "right";
 
