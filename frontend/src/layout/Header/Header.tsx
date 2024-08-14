@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { categoryLinks, navigationLinks } from "./lib/data";
+import { categoryLinks, navigationLinks } from "./types/data";
 import { useState } from "react";
 
 const Header: React.FC = () => {

@@ -1,0 +1,7 @@
+.text-stroke-white {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
