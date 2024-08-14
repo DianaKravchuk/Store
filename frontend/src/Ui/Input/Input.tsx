@@ -42,6 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {rest.type === "password" && (
             <button
               type="button"
+              disabled={rest.disabled}
               className="absolute flex items-center justify-center top-2.5 right-3"
               onClick={handleShowPassword}
             >

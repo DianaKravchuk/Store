@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "flex items-center  gap-[15px] rounded-3xl leading-6 transition-all duration-300 group";
+    "flex items-center rounded-3xl leading-[24px] transition-all duration-300 group";
 
   const variantStyles = {
     primary:
@@ -23,14 +23,14 @@ const Button: FC<ButtonProps> = ({
     secondaryLeft:
       "bg-transparent text-black focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] justify-start",
     tertiary:
-      "bg-transparent text-black border-black border focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] disabled:border-[#616062] justify-center",
+      "bg-transparent text-black border-black border focus:bg-[#a3a3a4] hover:bg-[#9e9e9f] active:bg-[#a3a3a4] disabled:bg-transparent disabled:text-[#616062] disabled:border-[#616062] justify-center py-[9.2px]",
   };
 
   const sizeStyles = {
-    s: "px-3 py-[2px] text-xs gap-[5px]",
-    m: "px-6 py-2.5 text-md",
+    s: "px-3 py-[2px] text-xs gap-x-[5px] max-h-[28px]",
+    m: "px-6 py-2.5 text-md gap-x-[12px]",
     l: "",
-    full: "w-full py-2.5 p-6 text-md",
+    full: "w-full py-2.5 p-6 text-md gap-x-[12px]",
   };
   const position = {
     left: "flex-row",
@@ -39,9 +39,9 @@ const Button: FC<ButtonProps> = ({
 
   const buttonClasses = classNames(
     baseStyles,
-    variantStyles[variant],
     sizeStyles[size],
     { [position[iconPosition]]: children },
+    variantStyles[variant],
     className,
   );
 

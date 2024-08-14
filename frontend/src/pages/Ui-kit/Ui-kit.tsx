@@ -141,7 +141,7 @@ const Uikit: FC = () => {
                 <FcGoogle />
               </span>
             </Button>
-            <Button size="m" text="Medium" variant="primary" disabled />
+            <Button size="m" text="Medium d" variant="primary" disabled />
             <Button size="m" text="Medium" variant="secondary" disabled />
             <Button size="m" text="Medium" variant="tertiary" disabled />
           </div>
@@ -192,7 +192,7 @@ const Uikit: FC = () => {
             </Button>
             <Button
               size="full"
-              text="Full width"
+              text="Full width 4"
               variant="secondary"
               iconPosition="right"
             >
@@ -202,7 +202,7 @@ const Uikit: FC = () => {
             </Button>
             <Button
               size="full"
-              text="Full width"
+              text="Full width 3"
               variant="tertiary"
               iconPosition="left"
             >
@@ -247,6 +247,8 @@ const Uikit: FC = () => {
               type="email"
               resetField={() => resetField("email")}
             />
+            <Input placeholder="Password" type="password" disabled />
+            <Input placeholder="E-mail" type="email" disabled />
           </div>
         </div>
       </section>
