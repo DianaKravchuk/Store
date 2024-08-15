@@ -8,7 +8,7 @@ const Button: FC<ButtonProps> = ({
   size = "m",
   className,
   text,
-  children,
+  icon,
   iconPosition = "left",
   ...props
 }) => {
@@ -40,14 +40,14 @@ const Button: FC<ButtonProps> = ({
   const buttonClasses = classNames(
     baseStyles,
     sizeStyles[size],
-    { [position[iconPosition]]: children },
+    { [position[iconPosition]]: icon },
     variantStyles[variant],
     className,
   );
 
   return (
     <button className={buttonClasses} {...props}>
-      {children && <>{children}</>}
+      {icon && <>{icon}</>}
       {text && <>{text}</>}
     </button>
   );

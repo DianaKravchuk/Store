@@ -40,13 +40,14 @@ const SubscribeForm = () => {
         size={"m"}
         variant={"primary"}
         text="Submit"
+        icon={
+          <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+            <GoArrowRight width={15} height={13} color="black" />
+          </span>
+        }
         iconPosition={"right"}
         disabled={!isValid || isSubmitting}
-      >
-        <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-          <GoArrowRight width={15} height={13} color="black" />
-        </span>
-      </Button>
+      />
     </form>
   );
 };

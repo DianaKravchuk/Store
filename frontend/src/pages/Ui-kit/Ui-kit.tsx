@@ -3,6 +3,7 @@ import { type FC } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { FcGoogle } from "react-icons/fc";
 import Input from "@/Ui/Input/Input";
+import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 
 const Uikit: FC = () => {
   const resetField = (inputName: string) =>
@@ -18,61 +19,76 @@ const Uikit: FC = () => {
             <Button size="s" text="Small" variant="secondary" />
             <Button size="s" text="Small" variant="secondaryLeft" />
             <Button size="s" text="Small" variant="tertiary" />
-            <Button size="s" text="Small" variant="primary" iconPosition="left">
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+            <Button
+              size="s"
+              text="Small"
+              variant="primary"
+              iconPosition="left"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
             <Button
               size="s"
               text="Small"
               variant="secondary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="s"
               text="Small"
               variant="tertiary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
             <Button
               size="s"
               text="Small"
               variant="primary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="s"
               text="Small"
               variant="secondary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="s"
               text="Small"
               variant="tertiary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={10} height={8} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={10} height={8} color="black" />
+                </span>
+              }
+            />
+
             <Button size="s" text="Small" variant="primary" disabled />
             <Button size="s" text="Small" variant="secondary" disabled />
             <Button size="s" text="Small" variant="tertiary" disabled />
@@ -86,61 +102,73 @@ const Uikit: FC = () => {
               text="Medium"
               variant="primary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button
               size="m"
               text="Medium"
               variant="secondary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button
               size="m"
               text="Medium"
               variant="tertiary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button
               size="m"
               text="Medium"
               variant="primary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button
               size="m"
               text="Medium"
               variant="secondary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button
               size="m"
               text="Medium"
               variant="tertiary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <FcGoogle />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
             <Button size="m" text="Medium d" variant="primary" disabled />
             <Button size="m" text="Medium" variant="secondary" disabled />
             <Button size="m" text="Medium" variant="tertiary" disabled />
@@ -155,61 +183,73 @@ const Uikit: FC = () => {
               text="Full width"
               variant="primary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={15} height={13} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={15} height={13} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="full"
               text="Full width"
               variant="secondary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={15} height={13} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={15} height={13} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="full"
               text="Full width"
               variant="tertiary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={15} height={13} color="black" />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={15} height={13} color="black" />
+                </span>
+              }
+            />
+
             <Button
               size="full"
               text="Full width"
               variant="primary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
-                <FcGoogle size={20} />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
+                  <FcGoogle size={20} />
+                </span>
+              }
+            />
+
             <Button
               size="full"
               text="Full width 4"
               variant="secondary"
               iconPosition="right"
-            >
-              <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
-                <FcGoogle size={20} />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
+                  <FcGoogle size={20} />
+                </span>
+              }
+            />
+
             <Button
               size="full"
               text="Full width 3"
               variant="tertiary"
               iconPosition="left"
-            >
-              <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
-                <FcGoogle size={20} />
-              </span>
-            </Button>
+              icon={
+                <span className="flex items-center justify-center rounded-[50%] py-[2px] px-[2px] group-hover:bg-white">
+                  <FcGoogle size={20} />
+                </span>
+              }
+            />
+
             <Button size="full" text="Full width" variant="primary" disabled />
             <Button
               size="full"
@@ -221,6 +261,71 @@ const Uikit: FC = () => {
           </div>
         </div>
       </section>
+
+      <section className="flex flex-col gap-5">
+        <h2 className="text-center text-3xl">Button Link</h2>
+        <div className="flex flex-col gap-4 w-[800px]">
+          <div className="flex flex-wrap gap-3">
+            <ButtonLink
+              size="m"
+              url="/account"
+              text="Account"
+              variant="primary"
+            />
+            <ButtonLink
+              size="m"
+              url="/account"
+              text="Account"
+              variant="secondary"
+            />
+            <ButtonLink
+              size="m"
+              url="/account"
+              text="Account"
+              variant="tertiary"
+            />
+            <ButtonLink
+              size="m"
+              url="/"
+              text="Home"
+              variant="primary"
+              iconPosition="left"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
+            <ButtonLink
+              size="m"
+              url="/"
+              text="Home"
+              variant="secondary"
+              iconPosition="left"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+
+            <ButtonLink
+              size="m"
+              url="/"
+              text="Home"
+              variant="tertiary"
+              iconPosition="left"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <FcGoogle />
+                </span>
+              }
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="flex flex-col gap-5">
         <h2 className="text-center text-3xl">Input</h2>
         <div className="flex flex-col gap-4 w-[800px]">
