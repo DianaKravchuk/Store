@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 const Button: FC<ButtonProps> = ({
   variant = "primary",
-  size = "m",
+  size = "medium",
   className,
   text,
   icon,
@@ -27,9 +27,9 @@ const Button: FC<ButtonProps> = ({
   };
 
   const sizeStyles = {
-    s: "px-3 py-[2px] text-xs gap-x-[5px] max-h-[28px]",
-    m: "px-6 py-2.5 text-md gap-x-[12px]",
-    l: "",
+    small: "px-3 py-[2px] text-xs gap-x-[5px] max-h-[28px]",
+    medium: "px-6 py-2.5 text-md gap-x-[12px]",
+    large: "",
     full: "w-full py-2.5 p-6 text-md gap-x-[12px]",
   };
   const position = {

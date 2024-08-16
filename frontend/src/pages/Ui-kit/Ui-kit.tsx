@@ -15,12 +15,12 @@ const Uikit: FC = () => {
         <h2 className="text-center text-3xl">Button</h2>
         <div className="flex flex-col gap-4 w-[800px]">
           <div className="flex gap-3 flex-wrap">
-            <Button size="s" text="Small" variant="primary" />
-            <Button size="s" text="Small" variant="secondary" />
-            <Button size="s" text="Small" variant="secondaryLeft" />
-            <Button size="s" text="Small" variant="tertiary" />
+            <Button size="small" text="Small" variant="primary" />
+            <Button size="small" text="Small" variant="secondary" />
+            <Button size="small" text="Small" variant="secondaryLeft" />
+            <Button size="small" text="Small" variant="tertiary" />
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="primary"
               iconPosition="left"
@@ -31,7 +31,7 @@ const Uikit: FC = () => {
               }
             />
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="secondary"
               iconPosition="left"
@@ -43,7 +43,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="tertiary"
               iconPosition="left"
@@ -54,7 +54,7 @@ const Uikit: FC = () => {
               }
             />
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="primary"
               iconPosition="right"
@@ -66,7 +66,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="secondary"
               iconPosition="right"
@@ -78,7 +78,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="s"
+              size="small"
               text="Small"
               variant="tertiary"
               iconPosition="right"
@@ -89,16 +89,16 @@ const Uikit: FC = () => {
               }
             />
 
-            <Button size="s" text="Small" variant="primary" disabled />
-            <Button size="s" text="Small" variant="secondary" disabled />
-            <Button size="s" text="Small" variant="tertiary" disabled />
+            <Button size="small" text="Small" variant="primary" disabled />
+            <Button size="small" text="Small" variant="secondary" disabled />
+            <Button size="small" text="Small" variant="tertiary" disabled />
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button size="m" text="Medium" variant="primary" />
-            <Button size="m" text="Medium" variant="secondary" />
-            <Button size="m" text="Medium" variant="tertiary" />
+            <Button size="medium" text="Medium" variant="primary" />
+            <Button size="medium" text="Medium" variant="secondary" />
+            <Button size="medium" text="Medium" variant="tertiary" />
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="primary"
               iconPosition="left"
@@ -110,7 +110,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="secondary"
               iconPosition="left"
@@ -122,7 +122,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="tertiary"
               iconPosition="left"
@@ -134,7 +134,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="primary"
               iconPosition="right"
@@ -146,7 +146,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="secondary"
               iconPosition="right"
@@ -158,7 +158,7 @@ const Uikit: FC = () => {
             />
 
             <Button
-              size="m"
+              size="medium"
               text="Medium"
               variant="tertiary"
               iconPosition="right"
@@ -169,9 +169,9 @@ const Uikit: FC = () => {
               }
             />
 
-            <Button size="m" text="Medium d" variant="primary" disabled />
-            <Button size="m" text="Medium" variant="secondary" disabled />
-            <Button size="m" text="Medium" variant="tertiary" disabled />
+            <Button size="medium" text="Medium d" variant="primary" disabled />
+            <Button size="medium" text="Medium" variant="secondary" disabled />
+            <Button size="medium" text="Medium" variant="tertiary" disabled />
           </div>
           <div className="flex flex-wrap gap-3">
             <Button size="full" text="Full width" variant="secondaryLeft" />
@@ -267,25 +267,25 @@ const Uikit: FC = () => {
         <div className="flex flex-col gap-4 w-[800px]">
           <div className="flex flex-wrap gap-3">
             <ButtonLink
-              size="m"
+              size="medium"
               url="/account"
               text="Account"
               variant="primary"
             />
             <ButtonLink
-              size="m"
+              size="medium"
               url="/account"
               text="Account"
               variant="secondary"
             />
             <ButtonLink
-              size="m"
+              size="medium"
               url="/account"
               text="Account"
               variant="tertiary"
             />
             <ButtonLink
-              size="m"
+              size="medium"
               url="/"
               text="Home"
               variant="primary"
@@ -298,7 +298,7 @@ const Uikit: FC = () => {
             />
 
             <ButtonLink
-              size="m"
+              size="medium"
               url="/"
               text="Home"
               variant="secondary"
@@ -311,7 +311,7 @@ const Uikit: FC = () => {
             />
 
             <ButtonLink
-              size="m"
+              size="medium"
               url="/"
               text="Home"
               variant="tertiary"

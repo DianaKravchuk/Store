@@ -37,7 +37,7 @@ const SubscribeForm = () => {
       />
       <Button
         type="submit"
-        size={"m"}
+        size={"medium"}
         variant={"primary"}
         text="Submit"
         icon={
