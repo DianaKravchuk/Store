@@ -1,6 +1,6 @@
+import Button from "@/Ui/Button/Button";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../../../Ui/Button";
 
 const LoginForm: React.FC = () => {
   const [userRegister, setUserRegister] = useState({ email: "", password: "" });
@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
         </div>
       </div>
       <div className="w-full h-fit">
-        <Button text="Log in" size="large" />
+        <Button text="Log in" size="full" variant="primary" />
       </div>
     </div>
   );

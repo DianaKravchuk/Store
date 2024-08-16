@@ -1,7 +1,8 @@
 import React from "react";
 import "../stroke.css";
-import Button from "../../../Ui/Button";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Button from "@/Ui/Button/Button";
+import { GoArrowRight } from "react-icons/go";
 
 interface BannerProps {
   salePercent?: number;
@@ -55,7 +56,17 @@ const Banner: React.FC<BannerProps> = ({
             )}
           </p>
         </div>
-        <Button text="Shop now" size="small" />
+        <Button
+          size="medium"
+          text="Shop now"
+          variant="primary"
+          iconPosition="right"
+          icon={
+            <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+              <GoArrowRight width={10} height={8} color="black" />
+            </span>
+          }
+        />
       </div>
     </div>
   );
