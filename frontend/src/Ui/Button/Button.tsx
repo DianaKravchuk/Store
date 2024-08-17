@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "flex items-center self-start rounded-3xl leading-[24px] tracking-[0.0412em] transition-all duration-300 group";
+    "flex items-center self-start font-inter rounded-3xl leading-[24px] tracking-[0.0072em] transition-all duration-300 group";
 
   const variantStyles = {
     primary:
