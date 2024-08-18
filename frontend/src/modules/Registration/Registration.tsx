@@ -1,11 +1,16 @@
 import React from "react";
-import LoginForm from "./components/LoginForm";
+import AfterSingUpComponent from "./components/AfterSingUpComponent";
+import backgroundImage from "./TemporaryBg/registrationBackground.png";
 
 const Registration: React.FC = () => {
   return (
     <div className="w-full flex gap-6">
-      <div className="w-[717px] h-[664px] rounded-tr-[25px] bg-[#CCCCCC]"></div>
-      <LoginForm />
+      <img
+        src={backgroundImage}
+        alt=""
+        className="absolute top-0 bg-cover w-[717px] h-[832px]"
+      />
+      <AfterSingUpComponent />
     </div>
   );
 };
