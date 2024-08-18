@@ -8,7 +8,6 @@ const SaleProducts: React.FC = () => {
       id: 1,
       title: "Men`s t-shirt",
       price: 25,
-      size: "small",
       backgroundImage: shirt,
       priceBeforeSale: 45,
     },
@@ -16,7 +15,6 @@ const SaleProducts: React.FC = () => {
       id: 2,
       title: "Men`s t-shirt",
       price: 25,
-      size: "small",
       backgroundImage: shirt,
       priceBeforeSale: 45,
     },
@@ -42,7 +40,7 @@ const SaleProducts: React.FC = () => {
               id={item.id}
               title={item.title}
               price={item.price}
-              size={item.size}
+              size={"small"}
               backgroundImage={item.backgroundImage}
               priceBeforeSale={item.priceBeforeSale}
             />

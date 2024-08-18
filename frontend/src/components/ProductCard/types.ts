@@ -2,7 +2,7 @@ export interface ProductCardProps {
   id: number;
   title: string;
   price: number;
-  size: string;
+  size: "small" | "medium" | "large";
   priceBeforeSale?: number;
   backgroundImage: string;
 }
