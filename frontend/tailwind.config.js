@@ -8,6 +8,9 @@ export default {
         inter: ["Inter", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      backgroundImage: {
+        checked: "url('./src/assets/icons/checkbox.svg')",
+      },
     },
   },
   plugins: [],
