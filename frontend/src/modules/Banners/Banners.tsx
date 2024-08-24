@@ -18,7 +18,7 @@ const Banners: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center overflow-hidden">
+    <div className="max-w-[1040px] h-full flex items-center justify-center overflow-hidden pt-[64px]">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={50}
