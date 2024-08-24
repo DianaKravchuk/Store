@@ -1,6 +1,6 @@
 export const categoryLinks = [
   {
-    label: "Sale",
+    label: "Man",
     href: "",
   },
   {
@@ -8,11 +8,11 @@ export const categoryLinks = [
     href: "",
   },
   {
-    label: "Man",
+    label: "Boys",
     href: "",
   },
   {
-    label: "Kids",
+    label: "Girls",
     href: "",
   },
 ];
