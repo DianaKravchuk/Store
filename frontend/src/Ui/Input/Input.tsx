@@ -22,17 +22,19 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const isShowError = errorMessage && rest.type !== "password";
 
     const inputClassName = classNames(
-      "w-[390px] rounded-3xl px-3 py-[9.2px] text-black text-[16px] leading-[24px] font-extralight bg-transparent outline-1 outline-transparent outline border border-black divide-x-[1px] transition-all duration-300",
-      "disabled:border-[#59595a] disabled:text-[#59595a]",
-      "focus:border-[#474744] focus:outline-[#474744]",
+      "w-full rounded-3xl px-3 py-[9.2px] text-black-000 text-base font-extralight bg-transparent outline-1 outline-transparent outline border border-black-000 divide-x-[1px] transition-all duration-300",
+      "disabled:border-grey-002 disabled:text-grey-002",
       {
-        ["outline-red-500 border-red-500 focus:outline-red-500 focus:border-red-500"]:
+        ["outline-red-error border-red-error focus:outline-red-error focus:border-red-error"]:
           errorMessage,
+        "focus:border-dark-grey-hovered focus:outline-dark-grey-hovered":
+          !errorMessage,
       },
     );
+
     return (
-      <div className="flex flex-col relative">
-        <div className="relative">
+      <div className="flex flex-col relative w-full">
+        <div className="relative w-full">
           <input
             {...rest}
             ref={ref}
@@ -72,7 +74,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {!!errorMessage && (
-          <span className="absolute -bottom-6 left-2 text-red-500">
+          <span className="absolute -bottom-3 left-3 font-inter text-red-error leading-3 text-[10px] font-extralight">
             {errorMessage}
           </span>
         )}
