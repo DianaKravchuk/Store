@@ -38,7 +38,7 @@ const SubscribeForm = () => {
       <Button
         type="submit"
         size={"medium"}
-        variant={"primary"}
+        variant={"filled"}
         text="Submit"
         icon={
           <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">

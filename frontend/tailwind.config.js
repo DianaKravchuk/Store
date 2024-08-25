@@ -39,6 +39,10 @@ export default {
         login: "url('@assets/images/SignUp.png')",
         checked: "url('@/assets/icons/checkbox.svg')",
       },
+      boxShadow: {
+        "button-hover":
+          "0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.15)",
+      },
     },
   },
   plugins: [],

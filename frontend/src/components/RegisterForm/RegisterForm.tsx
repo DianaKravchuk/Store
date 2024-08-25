@@ -77,7 +77,7 @@ const RegisterForm: FC = () => {
       <Button
         type="submit"
         size="full"
-        variant="primary"
+        variant="filled"
         text="Create account"
         icon={
           <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
@@ -90,7 +90,7 @@ const RegisterForm: FC = () => {
       <ButtonLink
         type="button"
         size="full"
-        variant="primary"
+        variant="filled"
         text="Log in"
         icon={
           <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
