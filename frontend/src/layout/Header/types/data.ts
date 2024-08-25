@@ -1,19 +1,19 @@
 export const categoryLinks = [
   {
     label: "Man",
-    href: "",
+    href: "/man",
   },
   {
     label: "Woman",
-    href: "",
+    href: "/woman",
   },
   {
     label: "Boys",
-    href: "",
+    href: "/boys",
   },
   {
     label: "Girls",
-    href: "",
+    href: "/girls",
   },
 ];
 

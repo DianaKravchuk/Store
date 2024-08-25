@@ -59,7 +59,7 @@ const Banner: React.FC<BannerProps> = ({
         <Button
           size="medium"
           text="Shop now"
-          variant="primary"
+          variant="filled"
           iconPosition="right"
           icon={
             <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
