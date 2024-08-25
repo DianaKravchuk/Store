@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
         </div>
       </div>
       <div className="w-full h-fit">
-        <Button text="Log in" size="full" variant="primary" />
+        <Button text="Log in" size="full" variant="filled" />
       </div>
     </div>
   );

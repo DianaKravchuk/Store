@@ -1,19 +1,19 @@
 export const categoryLinks = [
   {
-    label: "Sale",
-    href: "",
+    label: "Man",
+    href: "/man",
   },
   {
     label: "Woman",
-    href: "",
+    href: "/woman",
   },
   {
-    label: "Man",
-    href: "",
+    label: "Boys",
+    href: "/boys",
   },
   {
-    label: "Kids",
-    href: "",
+    label: "Girls",
+    href: "/girls",
   },
 ];
 
@@ -30,7 +30,7 @@ export const navigationLinks: readonly navigationLinksTypes[] = [
   },
   {
     id: 2,
-    link: "/account",
+    link: "/auth",
     icon: HiOutlineUser,
   },
   {
