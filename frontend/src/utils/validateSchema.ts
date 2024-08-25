@@ -33,28 +33,23 @@ export const subscribeSchema = z.object({
 });
 export type SubscribeValues = z.infer<typeof resetPasswordSchema>;
 
-export const registerSchema = z
-  .object({
-    firstName: z
-      .string()
-      .min(1, "Це поле є обов`язковим.")
-      .regex(/^[A-ZА-ЯІЇЄ]/, "Ім`я має починатись з великої літери")
-      .min(4, "мінімум 4 символи")
-      .max(20, "максимум 20 символів"),
-    lastName: z
-      .string()
-      .min(1, "Це поле є обов`язковим.")
-      .regex(/^[A-ZА-ЯІЇЄ]/, "Прізвище має починатись з великої літери")
-      .min(4, "мінімум 4 символи")
-      .max(20, "максимум 20 символів"),
-    email: email,
-    confirmEmail: email,
-    password: password,
-    accept: accept,
-  })
-  .refine((data) => data.confirmEmail === data.email, {
-    path: ["confirmEmail"],
-    message: "Електрона адреса не збігається",
-  });
+export const registerSchema = z.object({
+  firstName: z
+    .string()
+    .min(1, "Це поле є обов`язковим.")
+    .regex(/^[A-ZА-ЯІЇЄ]/, "Ім`я має починатись з великої літери")
+    .min(4, "мінімум 4 символи")
+    .max(20, "максимум 20 символів"),
+  lastName: z
+    .string()
+    .min(1, "Це поле є обов`язковим.")
+    .regex(/^[A-ZА-ЯІЇЄ]/, "Прізвище має починатись з великої літери")
+    .min(4, "мінімум 4 символи")
+    .max(20, "максимум 20 символів"),
+  email: email,
+  password: password,
+  accept: accept,
+  privacy: accept,
+});
 
 export type RegisterValues = z.infer<typeof registerSchema>;

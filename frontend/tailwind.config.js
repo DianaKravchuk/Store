@@ -36,8 +36,8 @@ export default {
         "background-color": "#f4f4f4",
       },
       backgroundImage: {
-        login: "url('./src/assets/images/SignUp.png')",
-        checked: "url('./src/assets/icons/checkbox.svg')",
+        login: "url('@assets/images/SignUp.png')",
+        checked: "url('@/assets/icons/checkbox.svg')",
       },
     },
   },
