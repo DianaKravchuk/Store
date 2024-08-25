@@ -30,7 +30,7 @@ export const navigationLinks: readonly navigationLinksTypes[] = [
   },
   {
     id: 2,
-    link: "/account",
+    link: "/auth",
     icon: HiOutlineUser,
   },
   {
