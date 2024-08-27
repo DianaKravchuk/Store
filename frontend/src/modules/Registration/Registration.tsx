@@ -1,16 +1,16 @@
 import React from "react";
-import AfterSingUpComponent from "./components/AfterSingUpComponent";
 import backgroundImage from "./TemporaryBg/registrationBackground.png";
+import LoginForm from "./components/LoginForm";
 
 const Registration: React.FC = () => {
   return (
-    <div className="w-full flex gap-6">
+    <div className="w-screen h-[728px] flex justify-between gap-6">
       <img
         src={backgroundImage}
         alt=""
-        className="absolute top-0 bg-cover w-[717px] h-[832px]"
+        className="bg-cover w-[717px] h-[832px] z-1 absolute top-0"
       />
-      <AfterSingUpComponent />
+      <LoginForm />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const LoginForm: React.FC = () => {
   const [userRegister, setUserRegister] = useState({ email: "", password: "" });
   return (
-    <div className="w-[390px] flex flex-col pt-[29px] gap-[35px]">
+    <div className="w-[390px] flex flex-col pt-[29px] gap-[35px] absolute right-[140px]">
       <div className="flex flex-col">
         <input
           type="email"
