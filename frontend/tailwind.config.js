@@ -37,6 +37,7 @@ export default {
       },
       backgroundImage: {
         login: "url('@assets/images/SignUp.png')",
+        error: "url('@assets/images/SignUp.png')",
         checked: "url('@/assets/icons/checkbox.svg')",
       },
       boxShadow: {
