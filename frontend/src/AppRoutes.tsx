@@ -1,21 +1,22 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 import Home from "@pages/Home";
-import Account from "@pages/Account";
 import Layout from "./layout/Layout/Layout";
 import Uikit from "@pages/Ui-kit/Ui-kit";
+import Auth from "./pages/Auth";
+import ErrorPage from "./pages/ErrorPage";
 
-const AppRoutes = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/ui-kit" element={<Uikit />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
-};
+const route = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Layout />} errorElement={<ErrorPage />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/ui-kit" element={<Uikit />} />
+      <Route path="/auth/:authPage?" element={<Auth />} />
+    </Route>,
+  ),
+);
 
-export default AppRoutes;
+export default route;
