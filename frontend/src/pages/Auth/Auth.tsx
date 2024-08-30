@@ -9,7 +9,7 @@ const Auth: FC = () => {
     <section className="flex w-full h-[832px] mb-[200px]">
       <div className="w-[56.05%] bg-login h-[832px] bg-no-repeat bg-cover"></div>
       <div className="w-[44%] pt-[200px] pl-[48px]">
-        {params.authPage === "login" ? <LoginForm /> : <RegisterForm />}
+        {params.authPage === "signup" ? <RegisterForm /> : <LoginForm />}
       </div>
     </section>
   );
