@@ -14,7 +14,8 @@ class Product(TimedBaseModel):
         verbose_name="Description of product",
     )
     is_visible = models.BooleanField(
-        default=True, verbose_name="Is the product visible in the catalog?",
+        default=True,
+        verbose_name="Is the product visible in the catalog?",
     )
 
     def to_entity(self) -> ProductEntity:

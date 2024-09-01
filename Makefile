@@ -41,6 +41,9 @@ superuser:
 collectstatic: 
 	${EXEC} ${APP_CONTAINER} python manage.py collectstatic
 
+.PHONY: run-test
+run-test: 
+	${EXEC} ${APP_CONTAINER} pytest 
 
 
 .PHONY: app
