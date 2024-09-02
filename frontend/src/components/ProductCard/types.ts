@@ -1,8 +1,9 @@
 export interface ProductCardProps {
   id: number;
   title: string;
-  price: number;
+  price?: number;
   size: "small" | "medium" | "large";
   priceBeforeSale?: number;
   backgroundImage: string;
+  isPreview: boolean;
 }

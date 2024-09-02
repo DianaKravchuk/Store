@@ -32,6 +32,7 @@ const SaleProducts: React.FC = () => {
           size={"large"}
           backgroundImage={shirt}
           priceBeforeSale={45}
+          isPreview={false}
         />
         <div className="flex flex-col gap-6">
           {testProducts.map((item) => (
@@ -43,6 +44,7 @@ const SaleProducts: React.FC = () => {
               size={"small"}
               backgroundImage={item.backgroundImage}
               priceBeforeSale={item.priceBeforeSale}
+              isPreview={false}
             />
           ))}
         </div>
