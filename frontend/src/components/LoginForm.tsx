@@ -1,3 +1,4 @@
+import { login } from "@/redux/slices/userSlice";
 import Button from "@/Ui/Button/Button";
 import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import Input from "@/Ui/Input/Input";
@@ -7,8 +8,10 @@ import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { GoArrowRight } from "react-icons/go";
+import { useDispatch } from "react-redux";
 
 const LoginForm: FC = () => {
+  const dispatch = useDispatch();
   const [isLoginSuccess, setIsLoginSuccess] = useState(false);
   const {
     register,
@@ -24,9 +27,18 @@ const LoginForm: FC = () => {
     mode: "onTouched",
   });
   const handleOnSubmit = (data: LoginValues) => {
-    console.log(data);
-    reset();
     setIsLoginSuccess(true);
+    dispatch(
+      login({
+        user: {
+          email: data.email,
+          firstName: "firstName",
+          lastName: "lastName",
+          id: "1",
+        },
+      }),
+    );
+    reset();
   };
   return (
     <>
