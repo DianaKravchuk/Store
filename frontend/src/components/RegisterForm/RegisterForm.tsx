@@ -1,3 +1,5 @@
+import { useAppDispatch } from "@/redux/hooks";
+import { login } from "@/redux/slices/userSlice";
 import Button from "@/Ui/Button/Button";
 import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import Checkbox from "@/Ui/Checkbox/Checkbox";
@@ -9,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { GoArrowRight } from "react-icons/go";
 
 const RegisterForm: FC = () => {
+  const dispatch = useAppDispatch();
   const [isRegisterSuccess, setIsRegisterSuccess] = useState(false);
   const {
     register,
@@ -28,9 +31,10 @@ const RegisterForm: FC = () => {
     mode: "onTouched",
   });
   const handleOnSubmit = (data: RegisterValues) => {
-    console.log(data);
-    reset();
+    const { email, firstName, lastName } = data;
     setIsRegisterSuccess(true);
+    dispatch(login({ user: { email, firstName, lastName, id: "1" } }));
+    reset();
   };
   return (
     <>
