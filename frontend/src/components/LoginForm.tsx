@@ -7,6 +7,7 @@ import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { GoArrowRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const LoginForm: FC = () => {
   const [isLoginSuccess, setIsLoginSuccess] = useState(false);
@@ -47,6 +48,12 @@ const LoginForm: FC = () => {
               placeholder="Password"
               type="password"
             />
+            <Link
+              to={"/resetPassword"}
+              className="font-inter font-extralight text-[12px] leading-6 px-3 py-[2px]"
+            >
+              Forgot password
+            </Link>
           </div>
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-[6px]">
