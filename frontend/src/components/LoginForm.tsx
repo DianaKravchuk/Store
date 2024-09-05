@@ -1,3 +1,4 @@
+import { login } from "@/redux/slices/userSlice";
 import Button from "@/Ui/Button/Button";
 import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import Input from "@/Ui/Input/Input";
@@ -7,8 +8,12 @@ import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { GoArrowRight } from "react-icons/go";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 
 const LoginForm: FC = () => {
+  const dispatch = useDispatch();
   const [isLoginSuccess, setIsLoginSuccess] = useState(false);
   const {
     register,
@@ -24,9 +29,18 @@ const LoginForm: FC = () => {
     mode: "onTouched",
   });
   const handleOnSubmit = (data: LoginValues) => {
-    console.log(data);
-    reset();
     setIsLoginSuccess(true);
+    dispatch(
+      login({
+        user: {
+          email: data.email,
+          firstName: "firstName",
+          lastName: "lastName",
+          id: "1",
+        },
+      }),
+    );
+    reset();
   };
   return (
     <>
@@ -47,6 +61,12 @@ const LoginForm: FC = () => {
               placeholder="Password"
               type="password"
             />
+            <Link
+              to={"/resetPassword"}
+              className="font-inter font-extralight text-[12px] leading-6 px-3 py-[2px]"
+            >
+              Forgot password
+            </Link>
           </div>
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-[6px]">
