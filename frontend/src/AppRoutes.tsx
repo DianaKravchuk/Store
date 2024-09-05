@@ -16,7 +16,7 @@ const route = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/ui-kit" element={<Uikit />} />
       <Route path="/auth/:authPage?" element={<Auth />} />
-      <Route path="/account" element={<Account />} />
+      <Route path="/account/:accountPage?" element={<Account />} />
     </Route>,
   ),
 );
