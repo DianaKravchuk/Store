@@ -5,5 +5,5 @@ export interface ProductCardProps {
   size: "small" | "medium" | "large";
   priceBeforeSale?: number;
   backgroundImage: string;
-  isPreview: boolean;
+  isPreview?: boolean;
 }

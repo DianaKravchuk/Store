@@ -9,7 +9,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   priceBeforeSale,
   size,
   backgroundImage,
-  isPreview,
+  isPreview = false,
 }) => {
   const sizeClass = {
     small: "size-[331px]",
@@ -26,7 +26,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`absolute inset-0 bg-cover bg-top  ${isHovered ? "transform transition-transform duration-300 scale-105" : ""}`}
+        className={`absolute inset-0 bg-cover bg-top ${
+          isHovered
+            ? "transform transition-transform duration-300 scale-105"
+            : ""
+        }`}
         style={{
           backgroundImage: backgroundImage
             ? `url(${backgroundImage})`
@@ -34,9 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         }}
       ></div>
 
-      {isPreview === true ? (
-        <></>
-      ) : (
+      {!isPreview && (
         <div className="z-10 h-full flex flex-col justify-between">
           <div className="w-full flex justify-end">
             <CiHeart size={24} />

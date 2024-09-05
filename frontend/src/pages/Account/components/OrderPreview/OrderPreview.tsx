@@ -2,13 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import { OrderProps } from "./types";
 import ProductCard from "@/components/ProductCard/ProductCard";
-
-const formatDate = (date: Date) => {
-  const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "long" });
-  const day = date.toLocaleDateString("en-US", { day: "2-digit" });
-  const month = date.toLocaleDateString("en-US", { month: "short" });
-  return `${dayOfWeek} ${day} ${month}`;
-};
+import { formatDate } from "../../../../utils/functions";
 
 const OrderPreview: FC<OrderProps> = ({ id, price, status, items, date }) => {
   const formattedDate = formatDate(date ? new Date(date) : new Date());
@@ -41,7 +35,7 @@ const OrderPreview: FC<OrderProps> = ({ id, price, status, items, date }) => {
             title={item.title}
             size={item.size}
             backgroundImage={item.backgroundImage}
-            isPreview={item.isPreview}
+            isPreview={true}
           />
         ))}
       </div>

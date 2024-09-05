@@ -1,12 +1,6 @@
 import { FC } from "react";
 import { OrderProps } from "../Account/components/OrderPreview/types";
-
-const formatDate = (date: Date) => {
-  const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "long" });
-  const day = date.toLocaleDateString("en-US", { day: "2-digit" });
-  const month = date.toLocaleDateString("en-US", { month: "short" });
-  return `${dayOfWeek} ${day} ${month}`;
-};
+import { formatDate } from "../../utils/functions";
 
 const Order: FC<OrderProps> = ({ id, status, date }) => {
   const formattedDate = formatDate(date ? new Date(date) : new Date());
