@@ -10,7 +10,11 @@ export const ButtonLink: FC<ButtonLinkProps> = ({ url, ...buttonProps }) => {
     <NavLink
       to={url}
       className={({ isActive }) =>
-        classNames("h-fit", { ["bg-white rounded-3xl"]: isActive })
+        classNames("h-fit", {
+          ["bg-white rounded-3xl"]: isActive,
+          ["w-full"]: buttonProps.size === "full",
+          ["flex justify-center"]: buttonProps.variant === "icon",
+        })
       }
     >
       <Button {...buttonProps} />

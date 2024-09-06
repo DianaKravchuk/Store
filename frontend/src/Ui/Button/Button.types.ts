@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 
-export type Variant = "textLeft" | "outlined" | "filled" | "text" | "icon";
+export type Variant = "outlined" | "filled" | "text" | "icon";
 export type Sizes = "small" | "medium" | "large" | "full" | "icon";
-export type Position = "left" | "right";
+export type IconPosition = "left" | "right" | "center";
+export type TextPosition = "start" | "end" | "center" | "between";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -10,5 +11,6 @@ export interface ButtonProps
   size: Sizes;
   text?: string;
   icon?: ReactNode;
-  iconPosition?: Position;
+  iconPosition?: IconPosition;
+  textPosition?: TextPosition;
 }
