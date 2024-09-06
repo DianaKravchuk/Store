@@ -2,22 +2,24 @@ import SubscribeForm from "@components/SubscribeForm/SubscribeForm";
 import { Link } from "react-router-dom";
 import { FOOTER_NAVIGATE } from "./constants";
 import logo from "@/assets/icons/Logo_medium.svg";
+import FooterSection from "./components/FooterSection";
+import FooterIconsSection from "./components/FooterIconSection";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-[52px] pb-[64px]">
-      <div className="flex flex-col gap-[58px] mx-auto w-[1040px]">
+    <footer className="flex flex-col gap-[52px] pb-3">
+      <div className="flex flex-col gap-[58px] mx-auto w-[1032px]">
         <div className="flex flex-col gap-3">
-          <Link to="/" className="">
+          <Link to="/" className="self-start">
             <img src={logo} alt="logo Shade" width={232} height={37} />
           </Link>
           <div className="flex justify-between">
             <div className="flex flex-col gap-[30px]">
-              <p className="max-w-[300px] font-inter text-[#141212] tracking-[0.01em] text-sm font-extralight leading-[17px]">
+              <p className="max-w-[300px] font-inter text-black-000 tracking-[0.01em] text-sm font-extralight leading-[17px]">
                 Discover the latest trends and elevate your style.
               </p>
               <div className="flex flex-col gap-[5px]">
-                <p className="text-sm font-extralight text-black tracking-wider">
+                <p className="text-sm font-extralight text-black-000 tracking-wider">
                   Join our newsettler to stay up to date on features abd
                   realises.
                 </p>
@@ -25,48 +27,39 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-6 pt-[5px]">
-              {FOOTER_NAVIGATE.map((nav) => (
-                <div key={nav.id} className="flex flex-col gap-3">
-                  <h3 className="uppercase font-montserrat font-normal text-xs leading-[15px]  tracking-[0.095em] text-[#141212]">
-                    {nav.title}
-                  </h3>
-                  <div className="flex flex-col">
-                    {nav.links.map((link) => (
-                      <Link
-                        key={link.id}
-                        to={link.url}
-                        className="text-[12px] leading-[28px] font-inter font-extralight -tracking-[0em] text-black px-[12px] "
-                      >
-                        {link.children}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+              {FOOTER_NAVIGATE.link.map((link) => (
+                <FooterSection
+                  links={link.links}
+                  title={link.title}
+                  key={link.id}
+                />
+              ))}
+              {FOOTER_NAVIGATE.icon.map((link) => (
+                <FooterIconsSection
+                  key={link.id}
+                  links={link.links}
+                  title={link.title}
+                />
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="border-t-[1px] border-[#cdc0c0]">
-        <div className="flex justify-between pt-2 px-1 mx-auto w-[1032px]">
-          <p className="text-xs font-inter text-[#141212] leading-[15px] tracking-[0.08em] font-extralight before:content-['\0040'] before:-tracking-[0.06em] before:mr-[2px]">
-            All right reserved
-          </p>
-          <div className="flex gap-6 tracking-[0.06em]">
+      <div className="flex flex-col items-center gap-2 pt-2 px-1 mx-auto w-[1032px] border-t-[1px] border-beige">
+        <div className="flex gap-6 tracking-[0.06em]">
+          {FOOTER_NAVIGATE.legalLinks.map((link) => (
             <Link
-              to="/legal"
-              className="text-xs font-inter text-[#141212] leading-[15px] font-extralight"
+              key={link.id}
+              to={link.url}
+              className="text-xs font-inter text-black-000 leading-[15px] font-extralight"
             >
-              Legal notice
+              {link.text}
             </Link>
-            <Link
-              to="/privacy"
-              className="text-xs font-inter text-[#141212] leading-[15px] font-extralight"
-            >
-              Privacy policy
-            </Link>
-          </div>
+          ))}
         </div>
+        <p className="text-xs font-inter text-black-000 leading-[15px] tracking-[0.08em] font-extralight before:content-['\0040'] before:-tracking-[0.06em] before:mr-[2px]">
+          All right reserved
+        </p>
       </div>
     </footer>
   );

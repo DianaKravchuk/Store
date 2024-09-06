@@ -41,7 +41,12 @@ const Uikit: FC = () => {
           <div className="flex gap-3 flex-wrap">
             <Button size="small" text="Small" variant="filled" />
             <Button size="small" text="Small" variant="text" />
-            <Button size="full" text="Text Left" variant="textLeft" />
+            <Button
+              size="full"
+              text="Text Left"
+              variant="text"
+              textPosition="start"
+            />
             <Button size="full" text="Text Left" variant="text" />
             <Button size="small" text="Small" variant="outlined" />
             <Button

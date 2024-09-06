@@ -13,6 +13,7 @@ const AccountNavigation: FC = () => {
           size="full"
           variant="text"
           text={item.label}
+          textPosition="between"
           icon={
             <span className="flex items-center justify-center bg-transparent rounded-[50%] py-1 px-1">
               <GoArrowRight width={15} height={13} color="black" />
