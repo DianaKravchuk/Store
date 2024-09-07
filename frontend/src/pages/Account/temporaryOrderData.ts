@@ -1,5 +1,6 @@
+import { ProductCardSize } from "@/components/ProductCard/types";
 import { OrderProps } from "./components/OrderPreview/types";
-import shirt from "@/modules/NewCollection/TemporaryCardImage/shirt.png";
+import shirt from "@pages/Home/TemporaryCardImage/shirt.png";
 
 export const testOrder: OrderProps[] = [
   {
@@ -12,13 +13,13 @@ export const testOrder: OrderProps[] = [
         id: 123,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
       {
         id: 34534,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
     ],
   },
@@ -32,13 +33,13 @@ export const testOrder: OrderProps[] = [
         id: 567768,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
       {
         id: 76743,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
     ],
   },
@@ -52,13 +53,13 @@ export const testOrder: OrderProps[] = [
         id: 567768,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
       {
         id: 76743,
         title: "Men`s t-shirt",
         backgroundImage: shirt,
-        size: "small",
+        size: ProductCardSize.Small,
       },
     ],
   },
