@@ -12,7 +12,10 @@ const PopupComponent: FC<PopupProps> = ({ open, onClose, children }) => {
       closeOnOverlayClick
       showCloseIcon={false}
       focusTrapped={false}
-      classNames={{ modal: "bg-transparent shadow-none" }}
+      classNames={{
+        modal: "bg-transparent shadow-none",
+        overlay: "bg-modal-overlay",
+      }}
     >
       <div>{children}</div>
     </Modal>
