@@ -32,6 +32,12 @@ const lastName = z
   .min(4, "мінімум 4 символи")
   .max(20, "максимум 20 символів");
 
+const phone = z
+  .string()
+  .regex(
+    /^\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+    "Введіть дійсний номер телефону",
+  );
 export const loginSchema = z.object({
   email: email,
   password: password,
@@ -64,7 +70,7 @@ export const newAddressSchema = z.object({
   lastName: lastName,
   region: firstName,
   address: firstName,
-  phone: firstName,
+  phone: phone,
 });
 
 export type NewAddressValues = z.infer<typeof newAddressSchema>;

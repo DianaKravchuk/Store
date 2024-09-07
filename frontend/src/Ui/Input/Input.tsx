@@ -4,6 +4,7 @@ import {
   IoCloseCircleOutline,
   IoEyeOffOutline,
 } from "react-icons/io5";
+import { InputMask } from "@react-input/mask";
 import { RiErrorWarningFill } from "react-icons/ri";
 import classNames from "classnames";
 import { forwardRef, useState } from "react";
@@ -35,12 +36,25 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="flex flex-col relative w-full">
         <div className="relative w-full">
-          <input
-            {...rest}
-            ref={ref}
-            type={inputType}
-            className={inputClassName}
-          />
+          {rest.placeholder === "+380" ? (
+            <InputMask
+              mask="+38 (___) ___-__-__"
+              // showMask
+              replacement={{ _: /\d/ }}
+              className={inputClassName}
+              ref={ref}
+              type="text"
+              {...rest}
+            />
+          ) : (
+            <input
+              {...rest}
+              ref={ref}
+              type={inputType}
+              className={inputClassName}
+            />
+          )}
+
           {rest.type === "password" && (
             <button
               type="button"
