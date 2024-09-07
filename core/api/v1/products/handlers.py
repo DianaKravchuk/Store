@@ -34,7 +34,9 @@ def get_product_list_handler(
         filters=ProductFilterEntity(search=filters.search),
         pagination=pagination_in,
     )
-    product_count = service.get_product_count(filters=filters)
+    product_count = service.get_product_count(
+        filters=ProductFilterEntity(search=filters.search),
+    )
 
     items = [ProductSchema.from_entity(obj) for obj in product_list]
     pagination_out = PaginationOut(
