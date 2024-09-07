@@ -7,6 +7,7 @@ const email = z
   .min(1, "Це поле є обов`язковим.")
   .max(30, "максимальна кількість символів 30")
   .email("Неправильний формат електронної пошти");
+
 const password = z
   .string()
   .min(1, "Це поле є обов`язковим.")
@@ -16,6 +17,20 @@ const password = z
   .regex(/^(?=.*[0-9])/, "мінімум одна цифра")
   .min(8, "мінімальна кількість символів 8")
   .max(12, "максимальна кількість символів 12");
+
+const firstName = z
+  .string()
+  .min(1, "Це поле є обов`язковим.")
+  .regex(/^[A-ZА-ЯІЇЄ]/, "Ім`я має починатись з великої літери")
+  .min(4, "мінімум 4 символи")
+  .max(20, "максимум 20 символів");
+
+const lastName = z
+  .string()
+  .min(1, "Це поле є обов`язковим.")
+  .regex(/^[A-ZА-ЯІЇЄ]/, "Прізвище має починатись з великої літери")
+  .min(4, "мінімум 4 символи")
+  .max(20, "максимум 20 символів");
 
 export const loginSchema = z.object({
   email: email,
@@ -34,18 +49,8 @@ export const subscribeSchema = z.object({
 export type SubscribeValues = z.infer<typeof resetPasswordSchema>;
 
 export const registerSchema = z.object({
-  firstName: z
-    .string()
-    .min(1, "Це поле є обов`язковим.")
-    .regex(/^[A-ZА-ЯІЇЄ]/, "Ім`я має починатись з великої літери")
-    .min(4, "мінімум 4 символи")
-    .max(20, "максимум 20 символів"),
-  lastName: z
-    .string()
-    .min(1, "Це поле є обов`язковим.")
-    .regex(/^[A-ZА-ЯІЇЄ]/, "Прізвище має починатись з великої літери")
-    .min(4, "мінімум 4 символи")
-    .max(20, "максимум 20 символів"),
+  firstName: firstName,
+  lastName: lastName,
   email: email,
   password: password,
   accept: accept,
@@ -53,3 +58,13 @@ export const registerSchema = z.object({
 });
 
 export type RegisterValues = z.infer<typeof registerSchema>;
+
+export const newAddressSchema = z.object({
+  firstName: firstName,
+  lastName: lastName,
+  region: firstName,
+  address: firstName,
+  phone: firstName,
+});
+
+export type NewAddressValues = z.infer<typeof newAddressSchema>;

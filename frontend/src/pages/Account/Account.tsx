@@ -30,7 +30,9 @@ const Account: FC = () => {
         </div>
         <div className="flex flex-1 flex-col gap-6">
           {params.accountPage === ACCOUNT_PAGE.Profile ? (
-            <ProfileMenu />
+            <div className="pt-[50px]">
+              <ProfileMenu />
+            </div>
           ) : (
             <>
               {filteredOrders.map((order) => (

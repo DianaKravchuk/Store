@@ -13,7 +13,8 @@ export const ButtonLink: FC<ButtonLinkProps> = ({ url, ...buttonProps }) => {
         classNames("h-fit", {
           ["bg-white rounded-3xl"]: isActive,
           ["w-full"]: buttonProps.size === "full",
-          ["flex justify-center"]: buttonProps.variant === "icon",
+          ["flex justify-center self-center w-fit"]:
+            buttonProps.variant === "icon",
         })
       }
     >
