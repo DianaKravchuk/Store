@@ -1,6 +1,6 @@
 import { useState } from "react";
-import AllAddress from "../AllAddress/AllAddress";
-import NewAddressForm from "../NewAddressForm/NewAddressForm";
+import AllAddress from "./components/AllAddress/AllAddress";
+import NewAddressForm from "./components/NewAddressForm/NewAddressForm";
 
 const MyAddress = () => {
   const [isShowNewAddress, setIsShowNewAddress] = useState(false);
