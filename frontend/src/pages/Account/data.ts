@@ -20,3 +20,11 @@ export const AccountLinks = [
     href: "/account/settings",
   },
 ];
+
+export enum ACCOUNT_PAGE {
+  Orders = "orders",
+  Returns = "returns",
+  Favorite = "favorite",
+  Profile = "profile",
+  Settings = "settings",
+}

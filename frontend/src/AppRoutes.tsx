@@ -9,6 +9,7 @@ import Uikit from "@pages/Ui-kit/Ui-kit";
 import Auth from "./pages/Auth";
 import ErrorPage from "./pages/ErrorPage";
 import Account from "./pages/Account";
+import Profile from "@pages/Profile";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const route = createBrowserRouter(
       <Route path="/ui-kit" element={<Uikit />} />
       <Route path="/auth/:authPage?" element={<Auth />} />
       <Route path="/account/:accountPage?" element={<Account />} />
+      <Route path="/profile/:profilePage?" element={<Profile />} />
     </Route>,
   ),
 );

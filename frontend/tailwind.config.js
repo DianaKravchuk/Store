@@ -10,6 +10,7 @@ export default {
       },
       colors: {
         "custom-bg": "rgba(244, 244, 244, 0.8)",
+        "modal-overlay": "rgba(0, 0, 0, 0.45)",
         "grey-000": "#f4f4f4",
         "grey-opacity-80%": "rgba(244, 244, 244, 0.8)",
         "black-000": "#000",

@@ -8,7 +8,7 @@ const OrderPreview: FC<OrderProps> = ({ id, price, status, items, date }) => {
   const formattedDate = formatDate(date ? new Date(date) : new Date());
 
   return (
-    <div className="w-full h-[476px] flex flex-col gap-3" key={id}>
+    <div className="w-full max-w-[680px] flex flex-col gap-3" key={id}>
       <div className="flex flex-col mt-[51px] gap-[18px]">
         <div className="flex flex-col gap-3">
           <h2 className="uppercase font-montserrat text-xs text-black tracking-widest ">

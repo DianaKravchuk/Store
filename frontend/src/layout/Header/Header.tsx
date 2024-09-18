@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 z-20 bg-grey-opacity-80%  w-full">
-      <div className="max-w-[1040px] flex mx-auto items-center justify-between pt-[60px]">
+      <div className="max-w-[1032px] flex mx-auto items-center justify-between pt-[60px]">
         <Link
           to={"/"}
           className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest"
