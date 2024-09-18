@@ -12,16 +12,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
   isPreview = false,
 }) => {
   const sizeClass = {
-    small: "size-[331px]",
-    medium: "w-[330px] h-[686px]",
-    large: "size-[686px]",
+    small: "w-[331px] h-[328px]",
+    medium: "w-[328px] h-[680px] row-span-2",
+    large: "size-[680px] col-span-2 row-span-2",
   }[size];
 
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className={`${sizeClass} relative rounded-3xl overflow-hidden p-5 flex flex-col justify-between`}
+      className={`${sizeClass} relative rounded-3xl overflow-hidden p-5 flex flex-col justify-between hover:cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
