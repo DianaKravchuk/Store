@@ -5,6 +5,7 @@ import AccountNavigation from "./components/AccountNavigation";
 import { testOrder } from "./temporaryOrderData";
 import ProfileMenu from "./components/ProfileMenu/ProfileMenu";
 import { ACCOUNT_PAGE } from "./data";
+import Favorites from "./components/Favorites/Favorites";
 
 const Account: FC = () => {
   const params = useParams<{ accountPage: ACCOUNT_PAGE }>();
@@ -33,6 +34,8 @@ const Account: FC = () => {
             <div className="pt-[50px]">
               <ProfileMenu />
             </div>
+          ) : params.accountPage === ACCOUNT_PAGE.Favorite ? (
+            <Favorites />
           ) : (
             <>
               {filteredOrders.map((order) => (

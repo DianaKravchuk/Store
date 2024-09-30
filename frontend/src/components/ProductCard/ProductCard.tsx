@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
 import { ProductCardProps } from "./types";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import {
+  addFavoriteItem,
+  deleteFavoriteItem,
+  selectFavoriteItems,
+} from "@/redux/slices/userFavorites";
+import Button from "@/Ui/Button/Button";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   title,
@@ -9,8 +17,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
   priceBeforeSale,
   size,
   backgroundImage,
+  id,
   isPreview = false,
 }) => {
+  const dispatch = useAppDispatch();
+  const favoriteItems = useAppSelector(selectFavoriteItems);
+
+  const isFavorite = favoriteItems.includes(id);
+
+  const toggleFavorite = () => {
+    isFavorite
+      ? dispatch(deleteFavoriteItem(id))
+      : dispatch(addFavoriteItem(id));
+  };
   const sizeClass = {
     small: "w-[331px] h-[328px]",
     medium: "w-[328px] h-[680px] row-span-2",
@@ -41,7 +60,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {!isPreview && (
         <div className="z-10 h-full flex flex-col justify-between">
           <div className="w-full flex justify-end">
-            <CiHeart size={24} />
+            <Button
+              size="icon"
+              variant="icon"
+              onClick={toggleFavorite}
+              icon={
+                isFavorite ? (
+                  <FaHeart size={24} color="#cc2e25" />
+                ) : (
+                  <FaRegHeart size={24} color="#cc2e25" />
+                )
+              }
+            />
           </div>
           <div className="w-full h-[53px] flex justify-between items-center bg-white rounded-[15px] py-1 px-3">
             <div className="flex flex-col">
