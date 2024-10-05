@@ -26,7 +26,7 @@ const SubscribeForm = () => {
   return (
     <form
       onSubmit={handleSubmit(handleOnSubmit)}
-      className="flex items-center gap-2 w-[558px]"
+      className="flex flex-wrap items-center gap-3 w-full md:flex-nowrap md:gap-2"
     >
       <Input
         {...register("email")}

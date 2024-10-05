@@ -2,6 +2,22 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: "320px",
+      md: "744px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1920px",
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "12px",
+        lg: "86px",
+        xl: "124px",
+        "2xl": "268px",
+      },
+    },
     extend: {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
