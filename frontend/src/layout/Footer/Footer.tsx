@@ -8,7 +8,7 @@ import FooterIconsSection from "./components/FooterIconSection";
 const Footer = () => {
   return (
     <footer>
-      <div className="container flex flex-col gap-14">
+      <div className="container flex flex-col gap-12 xl:gap-14">
         <div className="flex flex-col gap-3">
           <Link to="/" className="self-start">
             <img

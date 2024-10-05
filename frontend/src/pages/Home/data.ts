@@ -27,6 +27,22 @@ export const SALE_PRODUCTS = [
     size: ProductCardSize.Small,
     backgroundImage: shirt,
   },
+  // {
+  //   id: 24,
+  //   title: "Сheckered shirt",
+  //   price: 25,
+  //   priceBeforeSale: 35,
+  //   size: ProductCardSize.Small,
+  //   backgroundImage: shirt,
+  // },
+  // {
+  //   id: 25,
+  //   title: "Denim skirt midi",
+  //   price: 25,
+  //   priceBeforeSale: 35,
+  //   size: ProductCardSize.Small,
+  //   backgroundImage: shirt,
+  // },
 ];
 
 export const NEW_COLLECTION = [
@@ -72,6 +88,20 @@ export const NEW_COLLECTION = [
     size: ProductCardSize.Small,
     backgroundImage: shirt,
   },
+  // {
+  //   id: 17,
+  //   title: "Shoulder bag",
+  //   price: 25,
+  //   size: ProductCardSize.Small,
+  //   backgroundImage: shirt,
+  // },
+  // {
+  //   id: 18,
+  //   title: "Men's t-shirt",
+  //   price: 25,
+  //   size: ProductCardSize.Small,
+  //   backgroundImage: shirt,
+  // },
 ];
 
 export const BESTSELLER_PRODUCTS = [
@@ -96,6 +126,13 @@ export const BESTSELLER_PRODUCTS = [
     size: ProductCardSize.Small,
     backgroundImage: shirt,
   },
+  // {
+  //   id: 55,
+  //   title: "Shoulder bag",
+  //   price: 25,
+  //   size: ProductCardSize.Medium,
+  //   backgroundImage: shirt,
+  // },
   {
     id: 14,
     title: "Men's pants linen",

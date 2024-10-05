@@ -7,7 +7,7 @@ import { BESTSELLER_PRODUCTS, NEW_COLLECTION, SALE_PRODUCTS } from "./data";
 
 const Home: FC = () => {
   return (
-    <div className="w-full flex flex-col items-center gap-[200px] pt-[104px]">
+    <div className="w-full flex flex-col items-center gap-[100px] pt-[64px] md:gap-[200px]">
       <Banners />
       <Advantages />
       <ProductSection products={NEW_COLLECTION} title="New collection" />
