@@ -4,10 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  scrollbar-width: none;
+}
+
 .container {
   @apply w-full max-w-[1920px] m-auto px-3 md:max-lg:px-[clamp(12px,-210px+28.906vw,86px)] lg:max-xl:px-[clamp(86px,-66px+14.844vw,124px)] xl:px-[clamp(124px,-164px+22.5vw,268px)] 2xl:px-[268px];
 }
 
 .banner-text {
   @apply text-[32px] sm:text-[clamp(32px,19.925px+3.774vw,48px)] lg:text-[clamp(48px,-16px+6.25vw,64px)] leading-[39px] sm:leading-[clamp(39px,24.66px+4.481vw,58px)] lg:leading-[clamp(58px,-18px+7.422vw,77px)];
+}
+.menu {
+  @apply !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[95px];
+}
+.bm-burger-button {
+  @apply relative;
+} 
+#react-burger-menu-btn {
+  @apply !w-6 !h-6 !right-3 !left-0
 }

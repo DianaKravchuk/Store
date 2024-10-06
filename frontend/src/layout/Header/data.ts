@@ -26,16 +26,19 @@ export const navigationLinks: readonly navigationLinksTypes[] = [
   {
     id: 1,
     link: "/search",
+    text: "Search",
     icon: IoSearchOutline,
   },
   {
     id: 2,
     link: "/auth",
+    text: "Account",
     icon: HiOutlineUser,
   },
   {
     id: 3,
     link: "/cart",
+    text: "Cart",
     icon: IoCartOutline,
   },
 ];
