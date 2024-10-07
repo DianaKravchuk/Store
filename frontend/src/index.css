@@ -24,3 +24,15 @@ html, body {
 #react-burger-menu-btn {
   @apply !w-6 !h-6 !right-3 !left-0
 }
+
+.home-section {
+  @apply grid grid-cols-[repeat(auto-fill,minmax(224px,1fr))]
+   justify-items-center
+   gap-6 
+   lg:grid-cols-[repeat(auto-fill,minmax(240px,1fr))]
+   /* lg:grid-cols-2
+   lg:max-xl:max-w-[680px]
+   lg:m-auto 
+   xl:grid-cols-3 
+   2xl:grid-cols-4; */
+}

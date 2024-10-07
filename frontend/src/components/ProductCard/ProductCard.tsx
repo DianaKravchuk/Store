@@ -31,11 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
       : dispatch(addFavoriteItem(id));
   };
   const sizeClass = {
-    small: "w-[224px] h-[224px] lg:w-[328px] lg:h-[328px]",
+    small: "w-full h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
     medium:
-      "w-[224px] h-[224px] lg:w-[328px] lg:h-[680px] row-span-1 lg:row-span-2",
+      "w-full min-w-[224px] max-w-[328px] h-[328px] lg:min-w-[240px] lg:h-[680px] row-span-1 lg:row-span-2",
     large:
-      "size-[224px] lg:size-[680px] col-span-1 lg:col-span-2 row-span-1 lg:row-span-2",
+      "w-full min-w-[224px] max-w-[328px] h-[328px] lg:w-[680px] lg:h-[680px] lg:max-w-full col-span-1 lg:col-span-2 row-span-1 lg:row-span-2",
   }[size];
 
   const [isHovered, setIsHovered] = useState(false);

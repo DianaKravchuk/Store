@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-grey-opacity-80%  w-full">
-      <div className="container flex mx-auto items-end md:items-center justify-between pt-[28px] md:pt-[clamp(28px,-57.029px+11.429vw,60px)]">
+      <div className="container flex mx-auto items-end lg:items-center justify-between pt-[28px] md:pt-[clamp(28px,-57.029px+11.429vw,60px)]">
         <Link
           to={"/"}
           className="font-Jost font-extrabold text-[#2D2D2D] leading-[18px] text-[18px] tracking-widest"

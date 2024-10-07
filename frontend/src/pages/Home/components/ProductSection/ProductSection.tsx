@@ -11,12 +11,12 @@ const ProductSection: FC<ProductSectionProps> = ({ title, products }) => {
       <h3 className="font-inter uppercase text-center text-black-000 font-bold text-2xl leading-[29px]">
         {title}
       </h3>
-      <div className="grid  grid-cols-1 justify-items-center gap-6 md:grid-cols-3 lg:grid-cols-2 lg:max-xl:max-w-[680px] lg:m-auto xl:grid-cols-3 2xl:grid-cols-4">
+      <div className="home-section">
         {products.map((item) => (
           <ProductCard key={item.id} {...item} />
         ))}
       </div>
-      <div className="w-fit self-end lg:max-xl:pr-[86px]">
+      <div className="w-fit self-end">
         <ButtonLink
           size="small"
           url="/catalog"
