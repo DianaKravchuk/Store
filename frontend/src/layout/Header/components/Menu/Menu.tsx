@@ -2,9 +2,8 @@ import { FC, useState } from "react";
 import { categoryLinks, navigationLinks } from "../../data";
 import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import { slide as Menu } from "react-burger-menu";
-import { RxHamburgerMenu } from "react-icons/rx";
 import classNames from "classnames";
-
+import { Divide as Hamburger } from "hamburger-react";
 export interface MenuProps {
   isIcon?: boolean;
 }
@@ -31,7 +30,17 @@ const MenuComponent: FC<MenuProps> = ({ isIcon = false }) => {
       burgerButtonClassName="burger-btn"
       bodyClassName="overflow-hidden"
       menuClassName="right-3"
-      customBurgerIcon={<RxHamburgerMenu size={24} />}
+      customBurgerIcon={
+        <Hamburger
+          size={24}
+          distance="sm"
+          rounded
+          label="Show menu"
+          hideOutline={false}
+          toggled={isOpenMenu}
+          toggle={handleClickMenu}
+        />
+      }
     >
       <div className="bg-grey-opacity-80% max-w-[160px] rounded-3xl">
         {isIcon &&

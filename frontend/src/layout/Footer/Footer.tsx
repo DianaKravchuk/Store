@@ -32,7 +32,7 @@ const Footer = () => {
                 <SubscribeForm />
               </div>
             </div>
-            <div className="flex flex-wrap gap-y-3 md:pt-1 lg:gap-x-3 xl:pt-0">
+            <div className="flex flex-wrap gap-y-3 md:pt-1 md:gap-x-3 xl:pt-0">
               {FOOTER_NAVIGATE.link.map((link) => (
                 <FooterSection
                   links={link.links}
