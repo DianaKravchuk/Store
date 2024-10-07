@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-2 pt-2 px-1 mx-auto w-full border-t-[1px] border-beige">
+        <div className="flex flex-col items-center gap-2 py-2 px-1 mx-auto w-full border-t-[1px] border-beige">
           <div className="flex gap-6 tracking-[0.06em]">
             {FOOTER_NAVIGATE.legalLinks.map((link) => (
               <Link
