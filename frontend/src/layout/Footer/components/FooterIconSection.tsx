@@ -7,7 +7,7 @@ const FooterIconsSection: FC<FooterIconsSectionProps> = ({ title, links }) => (
     <h3 className="uppercase font-montserrat font-normal text-xs leading-[15px] tracking-[0.095em] text-black-000">
       {title}
     </h3>
-    <div className="flex flex-col">
+    <div className="flex flex-row lg:flex-col">
       {links.map((link) => (
         <ButtonLink
           key={link.id}

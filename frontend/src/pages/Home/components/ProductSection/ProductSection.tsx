@@ -7,11 +7,11 @@ import { ProductSectionProps } from "./types";
 
 const ProductSection: FC<ProductSectionProps> = ({ title, products }) => {
   return (
-    <section className="flex flex-col gap-9">
+    <section className="container flex flex-col gap-9">
       <h3 className="font-inter uppercase text-center text-black-000 font-bold text-2xl leading-[29px]">
         {title}
       </h3>
-      <div className="w-[1032px] grid grid-cols-3 grid-rows-2 gap-6">
+      <div className="home-section">
         {products.map((item) => (
           <ProductCard key={item.id} {...item} />
         ))}

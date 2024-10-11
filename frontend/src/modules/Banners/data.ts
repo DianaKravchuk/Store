@@ -16,7 +16,7 @@ export const BannersData: Banner[] = [
     outlineText: "Summer",
     filledText: "Sale",
     salePercent: 60,
-    backgroundImage: banner1,
+    backgroundImage: banner3,
   },
   {
     id: 2,
@@ -27,6 +27,6 @@ export const BannersData: Banner[] = [
   {
     id: 3,
     filledText: "Bestsellers",
-    backgroundImage: banner3,
+    backgroundImage: banner1,
   },
 ];

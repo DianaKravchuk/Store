@@ -23,14 +23,14 @@ const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <div
-      className="w-[1040px] h-[425px] rounded-[25px] bg-[#00000033] flex flex-col py-[60px] gap-[59px] bg-cover bg-top"
+      className="w-full h-[425px] rounded-[25px] bg-[#00000033] flex flex-col p-[30px] lg:p-[clamp(30px,-90px+11.719vw,60px)] gap-[59px] bg-no-repeat bg-center bg-[length:700px_425px] md:bg-top md:bg-cover"
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`
           : undefined,
       }}
     >
-      <div className="w-full flex justify-end pr-[60px] gap-[2px]">
+      <div className="w-full flex justify-end gap-[2px]">
         <div
           className="size-6 flex items-center justify-center rounded-full bg-white rotate-180 cursor-pointer"
           onClick={onPrev}
@@ -44,12 +44,12 @@ const Banner: React.FC<BannerProps> = ({
           <MdKeyboardArrowRight color="black" size={16} />
         </div>
       </div>
-      <div className="fixed bottom-[60px] flex flex-col pl-[84px] gap-6">
+      <div className="fixed bottom-[30px] lg:bottom-[clamp(30px,-90px+11.719vw,60px)] flex flex-col gap-6">
         <div>
-          <p className="uppercase text-stroke-white font-black text-[64px] leading-[77px]">
+          <p className="uppercase text-stroke-white font-black banner-text">
             {outlineText}
           </p>
-          <p className="text-white flex items-center uppercase gap-6 font-inter font-black text-[64px] leading-[77px]">
+          <p className="text-white flex items-center uppercase gap-6 font-inter font-black banner-text">
             {filledText}
             {salePercent !== undefined && (
               <span className="text-[#FFFFFF80]">-{salePercent}%</span>

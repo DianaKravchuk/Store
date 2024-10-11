@@ -30,6 +30,7 @@
       "@pages/*": ["./src/pages/*"],
       "@modules/*": ["./src/modules/*"],
       "@assets/*": ["./src/assets/*"],
+      "@hooks/*": ["./src/hooks/*"],
     }
   },
   "include": ["src"]
