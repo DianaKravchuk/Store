@@ -23,7 +23,7 @@ const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <div
-      className="w-full h-[425px] rounded-[25px] bg-[#00000033] flex flex-col p-[30px] lg:p-[clamp(30px,-90px+11.719vw,60px)] gap-[59px] bg-no-repeat bg-center bg-[length:700px_425px] md:bg-top md:bg-cover"
+      className="w-full h-[clamp(365px,319.717px+14.151vw,425px)] rounded-[25px] bg-[#00000033] flex flex-col p-[30px] lg:p-[clamp(30px,-90px+11.719vw,60px)] gap-[59px] bg-no-repeat bg-center bg-cover md:bg-top md:bg-cover"
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`
