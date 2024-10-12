@@ -9,15 +9,6 @@ export default {
       xl: "1280px",
       "2xl": "1920px",
     },
-    // container: {
-    //   center: true,
-    //   padding: {
-    //     DEFAULT: "12px",
-    //     lg: "86px",
-    //     xl: "124px",
-    //     "2xl": "268px",
-    //   },
-    // },
     extend: {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
