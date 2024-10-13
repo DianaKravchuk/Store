@@ -31,8 +31,8 @@ const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
     onClose();
   };
   return (
-    <section className="max-w-[391px] flex flex-col gap-[18px] pt-[2px]">
-      <h3 className="font-inter font-normal text-black-000 text-base self-end">
+    <section className="w-full max-w-[296px] md:max-w-[clamp(296px,43.571px+33.929vw,391px)] flex flex-col self-center md:self-end gap-3 pt-6 md:pt-[2px]">
+      <h3 className="font-inter font-normal text-black-000 text-base leading-[38px] self-end">
         New address
       </h3>
       <form

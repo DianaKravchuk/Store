@@ -9,7 +9,7 @@ const AllAddress: FC<AllAddressType> = ({ showAddNewAddress }) => {
   const addresses = useAppSelector(userAddresses);
   return (
     <>
-      <div className="w-full max-w-[390px] flex self-end">
+      <div className="w-full max-w-[390px] flex self-center md:self-end">
         <Button
           text="Add new address"
           size="full"
@@ -17,7 +17,7 @@ const AllAddress: FC<AllAddressType> = ({ showAddNewAddress }) => {
           onClick={showAddNewAddress}
         />
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col items-center gap-6 md:items-end">
         {addresses.map((address) => (
           <UserAddress key={address.id} address={address} />
         ))}

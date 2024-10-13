@@ -13,7 +13,7 @@ const ProfileMenu: FC = () => {
   const handleDeleteAccount = () => console.log("Account delete");
 
   return (
-    <div className="w-[328px] flex flex-col gap-3">
+    <div className="w-full flex flex-col gap-3">
       <div>
         {PROFILE_BUTTON &&
           PROFILE_BUTTON.map((button) => (
