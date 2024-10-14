@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const { user } = useAppSelector(userData);
 
   return (
-    <header className="sticky top-0 z-50 bg-grey-opacity-80%  w-full">
+    <header className="sticky top-0 z-50 bg-grey-opacity-80% w-full">
       <div className="container flex mx-auto items-center justify-between py-[14px] md:py-[clamp(14px,-28.514px+5.714vw,30px)]">
         <Link
           to={"/"}
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             />
           ))}
         </div>
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6 py-[3.52px]">
           <div className="w-9 h-9 hidden lg:max-xl:flex lg:max-xl:items-center lg:max-xl:justify-center">
             <MenuComponent />
           </div>
