@@ -11,7 +11,7 @@ export enum PROFILE_PAGE {
 }
 
 export const BREAD_CRUMBS_BASE = [
-  { link: "/", name: "Account" },
+  { link: "/account", name: "Account" },
   { link: "/account/profile", name: "Profile" },
 ];
 
