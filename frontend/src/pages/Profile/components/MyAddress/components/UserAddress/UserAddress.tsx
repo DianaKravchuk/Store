@@ -1,17 +1,17 @@
 import { useAppDispatch } from "@/redux/hooks";
-import { deleteAddress } from "@/redux/slices/userAddress";
+import { deleteAddress } from "@/redux/slices/userProfile";
 import Button from "@/Ui/Button/Button";
 import { FC, useState } from "react";
 import { UserAddressType } from "./types";
-import DeleteAddress from "../DeleteAddress/DeleteAddress";
 import PopupComponent from "@/components/ModalComponents/ModalComponents";
+import DeletePopup from "@/components/DeletePopup/DeletePopup";
 
 const UserAddress: FC<UserAddressType> = ({
   address: { address, fullName, phone, id },
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useAppDispatch();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -49,7 +49,12 @@ const UserAddress: FC<UserAddressType> = ({
               />
             </div>
             <PopupComponent onClose={closeModal} open={isModalOpen}>
-              <DeleteAddress onClose={closeModal} onDelete={confirmDelete} />
+              <DeletePopup
+                onClose={closeModal}
+                onDelete={confirmDelete}
+                description="Are you sure you want to delete the selected address?"
+                title="Delete address"
+              />
             </PopupComponent>
           </div>
         </div>

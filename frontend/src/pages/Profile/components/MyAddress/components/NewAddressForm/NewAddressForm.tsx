@@ -5,7 +5,7 @@ import { newAddressSchema, NewAddressValues } from "@/utils/validateSchema";
 import Input from "@/Ui/Input/Input";
 import Button from "@/Ui/Button/Button";
 import { useAppDispatch } from "@/redux/hooks";
-import { addNewAddress } from "@/redux/slices/userAddress";
+import { addNewAddress } from "@/redux/slices/userProfile";
 import { NewAddressFormProps } from "./types";
 
 const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
