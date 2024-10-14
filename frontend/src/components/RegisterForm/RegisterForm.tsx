@@ -31,9 +31,11 @@ const RegisterForm: FC = () => {
     mode: "onTouched",
   });
   const handleOnSubmit = (data: RegisterValues) => {
-    const { email, firstName, lastName } = data;
+    const { email, firstName, lastName, password } = data;
     setIsRegisterSuccess(true);
-    dispatch(login({ user: { email, firstName, lastName, id: "1" } }));
+    dispatch(
+      login({ user: { email, firstName, password, lastName, id: "1" } }),
+    );
     reset();
   };
   return (

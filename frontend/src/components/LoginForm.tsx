@@ -27,12 +27,13 @@ const LoginForm: FC = () => {
     resolver: zodResolver(loginSchema),
     mode: "onTouched",
   });
-  const handleOnSubmit = (data: LoginValues) => {
+  const handleOnSubmit = ({ email, password }: LoginValues) => {
     setIsLoginSuccess(true);
     dispatch(
       login({
         user: {
-          email: data.email,
+          email,
+          password,
           firstName: "firstName",
           lastName: "lastName",
           id: "1",
