@@ -31,9 +31,11 @@ const RegisterForm: FC = () => {
     mode: "onTouched",
   });
   const handleOnSubmit = (data: RegisterValues) => {
-    const { email, firstName, lastName } = data;
+    const { email, firstName, lastName, password } = data;
     setIsRegisterSuccess(true);
-    dispatch(login({ user: { email, firstName, lastName, id: "1" } }));
+    dispatch(
+      login({ user: { email, firstName, password, lastName, id: "1" } }),
+    );
     reset();
   };
   return (
@@ -82,35 +84,37 @@ const RegisterForm: FC = () => {
               ></Checkbox>
             </div>
           </div>
-          <Button
-            type="submit"
-            size="full"
-            variant="filled"
-            text="Create account"
-            icon={
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={15} height={13} color="black" />
-              </span>
-            }
-            iconPosition={"right"}
-            disabled={!isValid || isSubmitting}
-          />
-          <ButtonLink
-            type="button"
-            size="full"
-            variant="filled"
-            text="Log in"
-            icon={
-              <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
-                <GoArrowRight width={15} height={13} color="black" />
-              </span>
-            }
-            iconPosition={"right"}
-            url="/auth/login"
-          />
+          <div className="flex flex-col gap-[6px]">
+            <Button
+              type="submit"
+              size="full"
+              variant="filled"
+              text="Create account"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={15} height={13} color="black" />
+                </span>
+              }
+              iconPosition={"right"}
+              disabled={!isValid || isSubmitting}
+            />
+            <ButtonLink
+              type="button"
+              size="full"
+              variant="text"
+              text="Log in"
+              icon={
+                <span className="flex items-center justify-center bg-white rounded-[50%] py-1 px-1">
+                  <GoArrowRight width={15} height={13} color="black" />
+                </span>
+              }
+              iconPosition={"right"}
+              url="/auth/login"
+            />
+          </div>
         </form>
       ) : (
-        <div className="flex flex-col gap-12 max-w-[390px]">
+        <div className="flex flex-col gap-12 w-full max-w-[390px]">
           <p className="uppercase font-montserrat text-black-000 text-xs font-normal tracking-widest leading-[15px]">
             Thank you for registration
           </p>

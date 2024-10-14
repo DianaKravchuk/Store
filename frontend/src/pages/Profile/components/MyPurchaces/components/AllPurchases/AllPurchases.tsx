@@ -1,30 +1,29 @@
 import Button from "@/Ui/Button/Button";
 import { FC } from "react";
-import UserAddress from "../UserAddress/UserAddress";
 import { useAppSelector } from "@/redux/hooks";
-import { AllAddressType } from "./types";
+import { AllPurchasesType } from "./types";
 import { userProfile } from "@/redux/slices/userProfile";
+import UserPurchases from "../UserPurchases/UserPurchases";
 
-const AllAddress: FC<AllAddressType> = ({ showAddNewAddress }) => {
-  const { addresses } = useAppSelector(userProfile);
-
+const AllPurchases: FC<AllPurchasesType> = ({ showAddNewPurchases }) => {
+  const { payment } = useAppSelector(userProfile);
   return (
     <>
       <div className="w-full max-w-[390px] flex self-center md:self-end">
         <Button
-          text="Add new address"
+          text="Add new payment"
           size="full"
           variant="outlined"
-          onClick={showAddNewAddress}
+          onClick={showAddNewPurchases}
         />
       </div>
       <div className="flex flex-col items-center gap-6 md:items-end">
-        {addresses.map((address) => (
-          <UserAddress key={address.id} address={address} />
+        {payment.map((payment) => (
+          <UserPurchases key={payment.id} payment={payment} />
         ))}
       </div>
     </>
   );
 };
 
-export default AllAddress;
+export default AllPurchases;
