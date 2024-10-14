@@ -10,6 +10,7 @@ import {
   selectFavoriteItems,
 } from "@/redux/slices/userFavorites";
 import Button from "@/Ui/Button/Button";
+import { PiShoppingCartThin } from "react-icons/pi";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   title,
@@ -18,6 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   size,
   backgroundImage,
   id,
+  variant = "default",
   isPreview = false,
 }) => {
   const dispatch = useAppDispatch();
@@ -30,9 +32,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
       ? dispatch(deleteFavoriteItem(id))
       : dispatch(addFavoriteItem(id));
   };
+
+  const handleOnClick = () =>
+    console.log(`add product with ${id} to shopping cart`);
+
   const sizeClass = {
-    small:
-      "w-full  h-auto aspect-square min-h-[224px] max-h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
+    small: "w-full h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
+    smallSquare:
+      "w-full h-auto aspect-square min-h-[224px] max-h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
     medium:
       "w-full min-w-[224px] max-w-[328px] h-[328px] lg:min-w-[240px] lg:h-[680px] row-span-1 lg:row-span-2",
     large:
@@ -40,7 +47,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
   }[size];
 
   const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div
       className={`${sizeClass} relative rounded-3xl overflow-hidden p-[17px] flex flex-col justify-between hover:cursor-pointer`}
@@ -91,9 +97,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <span>{price}$</span>
               </p>
             </div>
-            <div className="size-6 bg-[#989899] flex items-center justify-center rounded-full">
-              <SlArrowRight size={12} />
-            </div>
+            {variant === "default" ? (
+              <div className="size-6 bg-[#989899] flex items-center justify-center rounded-full">
+                <SlArrowRight size={12} />
+              </div>
+            ) : (
+              <div>
+                <Button
+                  size="icon"
+                  variant="icon"
+                  icon={<PiShoppingCartThin size={24} />}
+                  onClick={handleOnClick}
+                />
+              </div>
+            )}
           </div>
         </div>
       )}
