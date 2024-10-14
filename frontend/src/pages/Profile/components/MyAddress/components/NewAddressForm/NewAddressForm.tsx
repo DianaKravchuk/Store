@@ -71,13 +71,20 @@ const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
             placeholder="+380"
           />
         </div>
-        <div className="w-full flex justify-end">
+        <div className="w-full max-w-[160px] lg:max-w-[391px] flex flex-col lg:flex-row gap-3 justify-between items-end self-end">
           <Button
             size="medium"
             variant="filled"
             text="Save"
             type="submit"
             disabled={!isValid || isSubmitting}
+          />
+          <Button
+            size="medium"
+            variant="outlined"
+            text="Cancel"
+            type="reset"
+            onClick={onClose}
           />
         </div>
       </form>
