@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import Button from "@/Ui/Button/Button";
@@ -6,11 +6,23 @@ import Button from "@/Ui/Button/Button";
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/slices/userSlice";
 import { PROFILE_BUTTON } from "./data";
+import PopupComponent from "@/components/ModalComponents/ModalComponents";
+import DeletePopup from "@/components/DeletePopup/DeletePopup";
+import { useNavigate } from "react-router";
 
 const ProfileMenu: FC = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const handleLogOut = () => dispatch(logout());
-  const handleDeleteAccount = () => console.log("Account delete");
+  const confirmDelete = () => {
+    handleLogOut();
+    navigate("/");
+  };
 
   return (
     <div className="w-full flex flex-col gap-3">
@@ -43,9 +55,17 @@ const ProfileMenu: FC = () => {
           variant="text"
           type="button"
           textPosition="start"
-          onClick={handleDeleteAccount}
+          onClick={openModal}
         />
       </div>
+      <PopupComponent onClose={closeModal} open={isModalOpen}>
+        <DeletePopup
+          onClose={closeModal}
+          onDelete={confirmDelete}
+          description="Are you sure you want to delete account?"
+          title="Delete account"
+        />
+      </PopupComponent>
     </div>
   );
 };
