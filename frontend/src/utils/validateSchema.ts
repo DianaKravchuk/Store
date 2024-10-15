@@ -1,3 +1,4 @@
+import { Language } from "@/pages/Settings/components/LanguagePopup/data";
 import { z } from "zod";
 
 const accept = z.boolean().refine((data) => data === true);
@@ -133,3 +134,11 @@ export const getChangePasswordSchema = (currentPassword?: string) => {
 export type EditPasswordValues = z.infer<
   ReturnType<typeof getChangePasswordSchema>
 >;
+
+export const changeLanguageSchema = z.object({
+  language: z.nativeEnum(Language, {
+    required_error: "Це поле є обов`язковим.",
+  }),
+});
+
+export type ChangeLanguageValues = z.infer<typeof changeLanguageSchema>;
