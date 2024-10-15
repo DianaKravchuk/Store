@@ -21,24 +21,32 @@ body {
 .banner-text {
   @apply text-[32px] sm:text-[clamp(32px,19.925px+3.774vw,48px)] lg:text-[clamp(48px,-16px+6.25vw,64px)] leading-[39px] sm:leading-[clamp(39px,24.66px+4.481vw,58px)] lg:leading-[clamp(58px,-18px+7.422vw,77px)];
 }
+
 .menu {
   @apply !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[66px];
 }
+
 .bm-burger-button {
   @apply relative;
 } 
-/* #react-burger-menu-btn {
-  @apply !w-6 !h-6 !right-3 !left-0
-} */
 
 .home-section {
   @apply grid grid-cols-[repeat(auto-fill,minmax(224px,1fr))]
    justify-items-center
    gap-6 
    lg:grid-cols-[repeat(auto-fill,minmax(240px,1fr))]
-   /* lg:grid-cols-2
-   lg:max-xl:max-w-[680px]
-   lg:m-auto 
-   xl:grid-cols-3 
-   2xl:grid-cols-4; */
+   min-[1760px]:grid-cols-4
+}
+.favorites {
+  @apply 
+   grid
+   gap-6 
+   justify-items-center 
+   grid-cols-[repeat(auto-fill,minmax(224px,1fr))]
+   min-[1800px]:grid-cols-3
+}
+
+/* Modal */
+.react-responsive-modal-modal {
+  @apply m-0 p-0;
 }

@@ -5,7 +5,7 @@ import { newAddressSchema, NewAddressValues } from "@/utils/validateSchema";
 import Input from "@/Ui/Input/Input";
 import Button from "@/Ui/Button/Button";
 import { useAppDispatch } from "@/redux/hooks";
-import { addNewAddress } from "@/redux/slices/userAddress";
+import { addNewAddress } from "@/redux/slices/userProfile";
 import { NewAddressFormProps } from "./types";
 
 const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
@@ -31,8 +31,8 @@ const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
     onClose();
   };
   return (
-    <section className="max-w-[391px] flex flex-col gap-[18px] pt-[2px]">
-      <h3 className="font-inter font-normal text-black-000 text-base self-end">
+    <section className="w-full max-w-[296px] md:max-w-[clamp(296px,43.571px+33.929vw,391px)] flex flex-col self-center md:self-end gap-3 pt-6 md:pt-[2px]">
+      <h3 className="font-inter font-normal text-black-000 text-base leading-[38px] self-end">
         New address
       </h3>
       <form
@@ -71,13 +71,20 @@ const NewAddressForm: FC<NewAddressFormProps> = ({ onClose }) => {
             placeholder="+380"
           />
         </div>
-        <div className="w-full flex justify-end">
+        <div className="w-full max-w-[160px] lg:max-w-[391px] flex flex-col lg:flex-row-reverse gap-3 justify-between items-end self-end">
           <Button
             size="medium"
             variant="filled"
             text="Save"
             type="submit"
             disabled={!isValid || isSubmitting}
+          />
+          <Button
+            size="medium"
+            variant="outlined"
+            text="Cancel"
+            type="reset"
+            onClick={onClose}
           />
         </div>
       </form>

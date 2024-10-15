@@ -1,27 +1,34 @@
 import Button from "@/Ui/Button/Button";
 import { FC } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { DeleteAddressProps } from "./types";
+import { DeletePopupProps } from "./types";
 
-const DeleteAddress: FC<DeleteAddressProps> = ({ onClose, onDelete }) => {
+const DeletePopup: FC<DeletePopupProps> = ({
+  onClose,
+  onDelete,
+  description,
+  title,
+}) => {
+  const isMobile = window.innerWidth < 768;
+
   return (
-    <section className="flex flex-col items-center gap-9 rounded-3xl relative py-20 px-20 bg-white w-[496px]">
+    <section className="flex flex-col items-center gap-9 rounded-3xl relative py-10 px-5 md:py-20 md:px-20 bg-white w-[296px] md:w-[496px]">
       <h3 className="font-inter text-lg leading-[22px] text-black-000">
-        Delete address
+        {title}
       </h3>
       <p className="w-full max-w-[210px] text-center font-inter text-black-000 test-sm leading-[17px] font-extralight tracking-tighter">
-        Are you sure you want to delete the selected address?
+        {description}
       </p>
       <div className="flex gap-4 w-full">
         <Button
-          size="medium"
+          size={isMobile ? "small" : "medium"}
           variant="filled"
           type="button"
           text="Yes"
           onClick={onDelete}
         />
         <Button
-          size="medium"
+          size={isMobile ? "small" : "medium"}
           variant="filled"
           type="button"
           text="No"
@@ -41,4 +48,4 @@ const DeleteAddress: FC<DeleteAddressProps> = ({ onClose, onDelete }) => {
   );
 };
 
-export default DeleteAddress;
+export default DeletePopup;

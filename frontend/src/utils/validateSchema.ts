@@ -1,3 +1,4 @@
+import { Language } from "@/pages/Settings/components/LanguagePopup/data";
 import { z } from "zod";
 
 const accept = z.boolean().refine((data) => data === true);
@@ -32,12 +33,22 @@ const lastName = z
   .min(4, "мінімум 4 символи")
   .max(20, "максимум 20 символів");
 
+const fullName = z
+  .string()
+  .min(1, "Це поле є обов`язковим.")
+  .min(4, "мінімум 8 символи")
+  .max(20, "максимум 30 символів");
+
 const phone = z
   .string()
   .regex(
     /^\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
     "Введіть дійсний номер телефону",
   );
+const cardsNumber = z
+  .string()
+  .regex(/^\d{4} \d{4} \d{4} \d{4}$/, "Введіть дійсний номер картки");
+
 export const loginSchema = z.object({
   email: email,
   password: password,
@@ -74,3 +85,60 @@ export const newAddressSchema = z.object({
 });
 
 export type NewAddressValues = z.infer<typeof newAddressSchema>;
+
+export const newPurchasesSchema = z.object({
+  firstName: firstName,
+  lastName: lastName,
+  fullName: fullName,
+  cards: cardsNumber,
+});
+
+export type NewPurchasesValues = z.infer<typeof newPurchasesSchema>;
+
+export const getChangeEmailSchema = (currentPassword?: string) => {
+  return currentPassword
+    ? z
+        .object({
+          currentPassword: password,
+          email: email,
+        })
+        .refine((data) => currentPassword === data.currentPassword, {
+          path: ["currentPassword"],
+          message: "Error current password",
+        })
+    : z.object({
+        currentPassword: password,
+        email: email,
+      });
+};
+
+export type EditEmailValues = z.infer<ReturnType<typeof getChangeEmailSchema>>;
+
+export const getChangePasswordSchema = (currentPassword?: string) => {
+  return currentPassword
+    ? z
+        .object({
+          currentPassword: password,
+          password: password,
+        })
+        .refine((data) => currentPassword === data.currentPassword, {
+          path: ["currentPassword"],
+          message: "Error current password",
+        })
+    : z.object({
+        currentPassword: password,
+        password: password,
+      });
+};
+
+export type EditPasswordValues = z.infer<
+  ReturnType<typeof getChangePasswordSchema>
+>;
+
+export const changeLanguageSchema = z.object({
+  language: z.nativeEnum(Language, {
+    required_error: "Це поле є обов`язковим.",
+  }),
+});
+
+export type ChangeLanguageValues = z.infer<typeof changeLanguageSchema>;

@@ -27,12 +27,13 @@ const LoginForm: FC = () => {
     resolver: zodResolver(loginSchema),
     mode: "onTouched",
   });
-  const handleOnSubmit = (data: LoginValues) => {
+  const handleOnSubmit = ({ email, password }: LoginValues) => {
     setIsLoginSuccess(true);
     dispatch(
       login({
         user: {
-          email: data.email,
+          email,
+          password,
           firstName: "firstName",
           lastName: "lastName",
           id: "1",
@@ -45,7 +46,7 @@ const LoginForm: FC = () => {
     <>
       {!isLoginSuccess ? (
         <form
-          className="flex flex-col gap-9 max-w-[395px]"
+          className="w-full flex flex-col gap-6 max-w-[395px]"
           onSubmit={handleSubmit(handleOnSubmit)}
         >
           <div className="flex flex-col gap-3">
@@ -67,7 +68,7 @@ const LoginForm: FC = () => {
               Forgot password
             </Link>
           </div>
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-[clamp(24px,-6.189px+9.434vw,64px)]">
             <div className="flex flex-col gap-[6px]">
               <Button
                 type="submit"
@@ -112,8 +113,8 @@ const LoginForm: FC = () => {
           </div>
         </form>
       ) : (
-        <div className="flex flex-col gap-12 max-w-[390px]">
-          <p className="uppercase font-montserrat text-black-000 text-xs font-normal tracking-widest leading-[15px]">
+        <div className="flex flex-col gap-12 w-full max-w-[390px]">
+          <p className="uppercase font-montserrat text-black-000 text-xs font-normal tracking-widest leading-[15px] text-center">
             Thank you for Log in into your SHADE. account
           </p>
           <ButtonLink
