@@ -8,6 +8,7 @@ export type User = {
   firstName: string;
   lastName: string;
   email: string;
+  password: string;
 };
 
 type UserState = {
@@ -31,10 +32,20 @@ export const userSlice = createSlice({
     logout: (state) => {
       state.user = null;
     },
+    changePassword: (state, action: PayloadAction<string>) => {
+      if (state.user) {
+        state.user.password = action.payload;
+      }
+    },
+    changeEmail: (state, action: PayloadAction<string>) => {
+      if (state.user) {
+        state.user.email = action.payload;
+      }
+    },
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, changeEmail, changePassword } = userSlice.actions;
 export const { userId } = userSlice.selectors;
 export const userData = (state: RootState) => state.user;
 export default userSlice.reducer;

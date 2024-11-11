@@ -1,7 +1,19 @@
+import { useState } from "react";
+import Email from "./components/Email/Email";
+import EditEmailForm from "./components/EditEmailForm/EditEmailForm";
+
 const MyEmail = () => {
+  const [isShowEditEmail, setIsShowEditEmail] = useState(false);
+  const showEditEmail = () => setIsShowEditEmail(true);
+  const closeEditEmail = () => setIsShowEditEmail(false);
+
   return (
     <>
-      <p>My Email</p>
+      {isShowEditEmail ? (
+        <EditEmailForm onClose={closeEditEmail} />
+      ) : (
+        <Email onEdit={showEditEmail} />
+      )}
     </>
   );
 };

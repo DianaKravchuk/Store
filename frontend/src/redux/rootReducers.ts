@@ -1,10 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import userSlice from "./slices/userSlice";
-import userAddress from "./slices/userAddress";
+import userProfile from "./slices/userProfile";
 import userFavorites from "./slices/userFavorites";
 
 export const rootReducer = combineReducers({
   user: userSlice,
-  userAddress: userAddress,
+  userProfile: userProfile,
   userFavorites: userFavorites,
 });

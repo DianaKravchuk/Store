@@ -46,6 +46,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               type="text"
               {...rest}
             />
+          ) : rest.placeholder === "Cards number" ? (
+            <InputMask
+              mask="____ ____ ____ ____"
+              // showMask
+              replacement={{ _: /\d/ }}
+              className={inputClassName}
+              ref={ref}
+              type="text"
+              {...rest}
+            />
           ) : (
             <input
               {...rest}

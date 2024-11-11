@@ -18,7 +18,8 @@ const Favorites = () => {
           {filteredCollection.map((favorite) => (
             <ProductCard
               key={favorite.id}
-              size={ProductCardSize.Small}
+              variant="favorites"
+              size={ProductCardSize.SmallSquare}
               title={favorite.title}
               price={favorite.price}
               backgroundImage={favorite.backgroundImage}
