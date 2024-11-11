@@ -14,10 +14,8 @@ const Home: FC = () => {
       return { countCard: 6, countCardBest: 6, countCardSale: 6 };
     } else if (width >= 1024 && width < 1280) {
       return { countCard: 6, countCardBest: 5, countCardSale: 3 };
-    } else if (width >= 1280 && width < 1760) {
-      return { countCard: 8, countCardBest: 6, countCardSale: 5 };
     } else {
-      return { countCard: 10, countCardBest: 8, countCardSale: 7 };
+      return { countCard: 8, countCardBest: 6, countCardSale: 5 };
     }
   };
 
