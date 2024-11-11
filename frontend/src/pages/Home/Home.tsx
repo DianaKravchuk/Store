@@ -12,7 +12,7 @@ const Home: FC = () => {
   const getCardCount = () => {
     if (width < 1024) {
       return { countCard: 6, countCardBest: 6, countCardSale: 6 };
-    } else if (width >= 1024 && width < 1280) {
+    } else if (width >= 1024 && width < 1311) {
       return { countCard: 6, countCardBest: 5, countCardSale: 3 };
     } else {
       return { countCard: 8, countCardBest: 6, countCardSale: 5 };
