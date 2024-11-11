@@ -5,6 +5,7 @@ import logo from "@assets/icons/Logo-small.svg";
 import { useAppSelector } from "@/redux/hooks";
 import { userData } from "@/redux/slices/userSlice";
 import MenuComponent from "./components/Menu/Menu";
+import { HiUser } from "react-icons/hi2";
 
 const Header: React.FC = () => {
   const { user } = useAppSelector(userData);
@@ -37,9 +38,15 @@ const Header: React.FC = () => {
             <ButtonLink
               key={item.id}
               size="icon"
-              url={item.id === 2 && user ? "/account" : item.link}
               variant="icon"
-              icon={<item.icon size={24} />}
+              url={item.id === 2 && user ? "/account" : item.link}
+              icon={
+                item.id === 2 && user ? (
+                  <HiUser size={25} />
+                ) : (
+                  <item.icon size={24} />
+                )
+              }
             />
           ))}
         </div>

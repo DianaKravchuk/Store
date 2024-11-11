@@ -4,10 +4,15 @@ import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import { slide as Menu } from "react-burger-menu";
 import classNames from "classnames";
 import { Divide as Hamburger } from "hamburger-react";
+import { useAppSelector } from "@/redux/hooks";
+import { userData } from "@/redux/slices/userSlice";
+import { HiUser } from "react-icons/hi2";
 export interface MenuProps {
   isIcon?: boolean;
 }
 const MenuComponent: FC<MenuProps> = ({ isIcon = false }) => {
+  const { user } = useAppSelector(userData);
+
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const handleClickMenu = () => setIsOpenMenu(!isOpenMenu);
@@ -49,10 +54,16 @@ const MenuComponent: FC<MenuProps> = ({ isIcon = false }) => {
             <ButtonLink
               key={link.id}
               size="medium"
-              url={link.link}
               text={link.text}
               variant="text"
-              icon={<link.icon size={20} />}
+              url={link.id === 2 && user ? "/account" : link.link}
+              icon={
+                link.id === 2 && user ? (
+                  <HiUser size={24} />
+                ) : (
+                  <link.icon size={24} />
+                )
+              }
               iconPosition="right"
               textPosition="between"
               onClick={handleClickMenu}
