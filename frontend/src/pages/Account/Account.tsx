@@ -6,6 +6,7 @@ import { testOrder } from "./temporaryOrderData";
 import ProfileMenu from "./components/ProfileMenu/ProfileMenu";
 import { ACCOUNT_PAGE } from "./data";
 import Favorites from "./components/Favorites/Favorites";
+import Settings from "../Settings/Settings";
 
 const Account: FC = () => {
   const params = useParams<{ accountPage: ACCOUNT_PAGE }>();
@@ -36,6 +37,8 @@ const Account: FC = () => {
             </div>
           ) : params.accountPage === ACCOUNT_PAGE.Favorite ? (
             <Favorites />
+          ) : params.accountPage === ACCOUNT_PAGE.Settings ? (
+            <Settings />
           ) : (
             <>
               {filteredOrders.map((order) => (
