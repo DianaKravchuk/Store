@@ -21,9 +21,9 @@ const Account: FC = () => {
   });
 
   return (
-    <div className="w-[1032px] flex items-center justify-center overflow-hidden mt-[168px]">
-      <div className="w-full flex justify-between gap-6">
-        <div className="w-[328px] flex flex-col gap-8">
+    <div className="container flex items-center justify-center overflow-hidden pt-[64px] mt-[168px]">
+      <div className="w-full flex flex-col md:flex-row justify-between gap-6">
+        <div className="w-full max-w-[172px] xl:max-w-[328px] flex flex-col gap-8">
           <p className="font-inter text-[16px] leading-[19px]">
             Welcome! This is your Shade. profile
           </p>

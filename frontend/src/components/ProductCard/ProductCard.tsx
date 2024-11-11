@@ -31,7 +31,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
       : dispatch(addFavoriteItem(id));
   };
   const sizeClass = {
-    small: "w-full h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
+    small:
+      "w-full  h-auto aspect-square min-h-[224px] max-h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
     medium:
       "w-full min-w-[224px] max-w-[328px] h-[328px] lg:min-w-[240px] lg:h-[680px] row-span-1 lg:row-span-2",
     large:

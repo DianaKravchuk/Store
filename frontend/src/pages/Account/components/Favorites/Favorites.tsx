@@ -12,9 +12,9 @@ const Favorites = () => {
   );
 
   return (
-    <div className="pt-[50px] w-full max-w-[684px]">
+    <div className="pt-[50px] w-full m-auto">
       {filteredCollection.length ? (
-        <div className="grid grid-cols-2 gap-6 justify-items-center">
+        <div className="favorites">
           {filteredCollection.map((favorite) => (
             <ProductCard
               key={favorite.id}
