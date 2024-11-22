@@ -43,6 +43,7 @@ const LanguagePopup: FC<LanguagePopupProps> = ({ onClose }) => {
           name="language"
           render={({ field, fieldState }) => (
             <Select
+              variant="language"
               placeholder="Languages"
               value={field.value}
               options={Object.values(Language)}

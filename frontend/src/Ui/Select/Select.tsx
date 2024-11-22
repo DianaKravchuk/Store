@@ -18,9 +18,11 @@ const DropdownIndicator = (props: DropdownIndicatorProps<Option>) => {
   );
 };
 
-const optionClName = (focused: boolean) => {
+const optionClName = (focused: boolean, variant: "sort" | "language") => {
   return classNames("", {
-    ["bg-grey-000 cursor-pointer"]: focused,
+    ["bg-grey-000 cursor-pointer"]: focused && variant === "language",
+    ["px-6 py-[10px]"]: variant === "sort",
+    ["px-6 py-[10px] !cursor-pointer"]: variant === "sort" && focused,
   });
 };
 
@@ -29,6 +31,7 @@ const Select = ({
   options,
   onChange,
   helperText,
+  variant,
   ...props
 }: SelectProps) => {
   const selectValue = value ? { value, label: value } : undefined;
@@ -38,9 +41,28 @@ const Select = ({
     label: option,
   }));
 
-  const containerClName = classNames(
-    "px-[10px] py-[9.2px] border border-black rounded-3xl",
-  );
+  const containerClName = classNames("", {
+    ["px-[10px] py-[9.2px] border border-black rounded-3xl"]:
+      variant === "language",
+    [""]: variant === "sort",
+  });
+  const menuCN = classNames("", {
+    ["bg-white relative left-0 top-0 w-full"]: variant === "language",
+    [""]: variant === "sort",
+  });
+  const controlCN = classNames("", {
+    ["flex !min-h-0"]: variant === "language",
+    ["!cursor-pointer w-fit flex gap-3 text-black-000 text-xs"]:
+      variant === "sort",
+  });
+  const placeholderCN = classNames("", {
+    ["font-inter text-base text-black font-extralight"]: variant === "language",
+    [""]: variant === "sort",
+  });
+  const menuListCN = classNames("", {
+    ["flex flex-col gap-2 p-[10px] border rounded-lg"]: variant === "language",
+    ["flex flex-col rounded-3xl bg-white"]: variant === "sort",
+  });
   return (
     <div className="w-full relative">
       <ReactSelect
@@ -54,11 +76,11 @@ const Select = ({
         components={{ IndicatorSeparator: null, DropdownIndicator }}
         classNames={{
           container: () => containerClName,
-          control: () => "flex !min-h-0",
-          placeholder: () => "font-inter text-base text-black font-extralight",
-          menu: () => "bg-white relative left-0 top-0 w-full",
-          menuList: () => "flex flex-col gap-2 p-[10px] border rounded-lg",
-          option: (state) => optionClName(state.isFocused),
+          control: () => controlCN,
+          placeholder: () => placeholderCN,
+          menu: () => menuCN,
+          menuList: () => menuListCN,
+          option: (state) => optionClName(state.isFocused, variant),
         }}
         {...props}
       />
