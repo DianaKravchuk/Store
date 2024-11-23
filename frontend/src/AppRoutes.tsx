@@ -10,6 +10,7 @@ import Auth from "./pages/Auth";
 import ErrorPage from "./pages/ErrorPage";
 import Account from "./pages/Account";
 import Profile from "@pages/Profile";
+import Order from "./pages/Order";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const route = createBrowserRouter(
       <Route path="/auth/:authPage?" element={<Auth />} />
       <Route path="/account/:accountPage?" element={<Account />} />
       <Route path="/profile/:profilePage?" element={<Profile />} />
+      <Route path="/account/orders/order" element={<Order />} />
     </Route>,
   ),
 );
