@@ -22,6 +22,10 @@ const Button: FC<ButtonProps> = ({
       "bg-black-000 text-white hover:bg-dark-grey-hovered hover:shadow-button-hover focus:bg-dark-grey-focused active:dark-grey-pressed disabled:bg-dark-grey-disabled disabled:text-grey-002 disabled:shadow-none",
     text: "bg-transparent text-black-000 hover:bg-light-grey-hovered focus:bg-light-grey-focused active:bg-light-color-pressed disabled:bg-transparent disabled:text-grey-002",
     icon: "rounded-full flex items-center justify-center bg-transparent hover:bg-light-grey-hovered focus:bg-light-grey-focused active:bg-light-color-pressed",
+    pagination:
+      "flex justify-center items-center font-inter font-extralight text-xs leading-6 text-black-000",
+    "pagination-active":
+      "flex justify-center font-inter font-extralight text-xs leading-6 items-center text-grey-001",
   };
 
   const sizeStyles = {
@@ -29,6 +33,7 @@ const Button: FC<ButtonProps> = ({
     medium: "px-6 py-2.5 text-md gap-x-[12px] w-full max-w-[160px]",
     icon: "px-[6px] py-[6px] justify-center",
     large: "",
+    pagination: "size-6",
     full: "w-full py-2.5 p-6 text-md gap-x-[12px]",
   };
 

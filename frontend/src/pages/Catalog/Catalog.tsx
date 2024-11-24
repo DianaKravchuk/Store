@@ -3,6 +3,7 @@ import { type CatalogProps } from "./types";
 import Categories from "./modules/Categories/Categories";
 import Products from "./modules/Products/Products";
 import Filters from "./modules/Filters/Filters";
+import Pagination from "./modules/Pagination/Pagination";
 
 const Catalog: FC<CatalogProps> = ({ page }) => {
   return (
@@ -12,6 +13,7 @@ const Catalog: FC<CatalogProps> = ({ page }) => {
         <Filters />
         <Products />
       </div>
+      <Pagination currentPage={1} totalPages={6} />
     </div>
   );
 };
