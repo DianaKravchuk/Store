@@ -49,6 +49,11 @@ const Account: FC = () => {
                   price={order.price}
                   items={order.items}
                   date={order.date}
+                  country={order.country}
+                  city={order.city}
+                  street={order.street}
+                  homeNumber={order.homeNumber}
+                  phoneNumber={order.phoneNumber}
                 />
               ))}
             </>

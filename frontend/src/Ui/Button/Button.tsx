@@ -10,10 +10,10 @@ const Button: FC<ButtonProps> = ({
   icon,
   iconPosition = "left",
   textPosition = "center",
+  rounded = "3xl",
   ...props
 }) => {
-  const baseStyles =
-    "flex items-center self-start text-nowrap font-inter rounded-3xl leading-[24px] tracking-[0.0072em] transition-all duration-300 group";
+  const baseStyles = `flex items-center self-start text-nowrap font-inter rounded-${rounded} leading-[24px] tracking-[0.0072em] transition-all duration-300 group`;
 
   const variantStyles = {
     outlined:

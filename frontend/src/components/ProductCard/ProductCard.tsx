@@ -37,6 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     console.log(`add product with ${id} to shopping cart`);
 
   const sizeClass = {
+    orderPreviewSize: "size-[152px]",
     small: "w-full h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",
     smallSquare:
       "w-full h-auto aspect-square min-h-[224px] max-h-[328px] min-w-[224px] max-w-[328px] lg:min-w-[240px]",

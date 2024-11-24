@@ -13,4 +13,5 @@ export interface ButtonProps
   icon?: ReactNode;
   iconPosition?: IconPosition;
   textPosition?: TextPosition;
+  rounded?: string;
 }
