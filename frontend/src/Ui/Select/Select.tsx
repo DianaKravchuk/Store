@@ -64,7 +64,7 @@ const Select = ({
     ["flex flex-col rounded-3xl bg-white"]: variant === "sort",
   });
   return (
-    <div className="w-full relative">
+    <div className="w-full relative z-20">
       <ReactSelect
         isSearchable={false}
         unstyled
