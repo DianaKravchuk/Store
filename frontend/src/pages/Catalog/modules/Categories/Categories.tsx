@@ -11,7 +11,7 @@ const Categories: FC<CategoriesProps> = ({ page }) => {
       <h2 className="text-2xl uppercase font-inter font-bold leading-[46px]">
         Show all for {page}
       </h2>
-      <ul className="md:flex flex-wrap">
+      <ul className="flex flex-wrap">
         {CATALOG_CATEGORIES[page] &&
           CATALOG_CATEGORIES[page].map(({ id, name, link }) => (
             <li key={id} className="w-fit">
