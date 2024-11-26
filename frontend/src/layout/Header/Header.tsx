@@ -4,10 +4,12 @@ import { ButtonLink } from "@/Ui/ButtonLink/ButtonLink";
 import logo from "@assets/icons/Logo-small.svg";
 import { useAppSelector } from "@/redux/hooks";
 import { userData } from "@/redux/slices/userSlice";
-import MenuComponent from "./components/Menu/Menu";
 import { HiUser } from "react-icons/hi2";
+import MenuComponent from "@/components/MenuComponent/MenuComponent";
+import Menu from "./components/Menu/Menu";
+import { Divide as Hamburger } from "hamburger-react";
 
-const Header: React.FC = () => {
+const Header = () => {
   const { user } = useAppSelector(userData);
 
   return (
@@ -32,7 +34,21 @@ const Header: React.FC = () => {
         </div>
         <div className="hidden lg:flex items-center gap-6 py-[3.52px]">
           <div className="w-9 h-9 hidden lg:max-xl:flex lg:max-xl:items-center lg:max-xl:justify-center">
-            <MenuComponent />
+            <MenuComponent
+              className="menu"
+              renderItem={(onClose) => <Menu onClose={onClose} />}
+              renderControl={(closeMenu, isOpen) => (
+                <Hamburger
+                  size={24}
+                  distance="sm"
+                  rounded
+                  label="Show menu"
+                  hideOutline={false}
+                  toggled={isOpen}
+                  toggle={closeMenu}
+                />
+              )}
+            />
           </div>
           {navigationLinks.map((item) => (
             <ButtonLink
@@ -51,7 +67,21 @@ const Header: React.FC = () => {
           ))}
         </div>
         <div className="w-9 h-9 flex justify-center items-center lg:hidden">
-          <MenuComponent isIcon />
+          <MenuComponent
+            className="menu"
+            renderItem={(onClose) => <Menu isIcon onClose={onClose} />}
+            renderControl={(closeMenu, isOpen) => (
+              <Hamburger
+                size={24}
+                distance="sm"
+                rounded
+                label="Show menu"
+                hideOutline={false}
+                toggled={isOpen}
+                toggle={closeMenu}
+              />
+            )}
+          />
         </div>
       </div>
     </header>

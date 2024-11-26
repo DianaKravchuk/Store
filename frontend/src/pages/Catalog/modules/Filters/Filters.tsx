@@ -23,9 +23,9 @@ const Filters = () => {
       </div>
       <MenuComponent
         className="filter"
-        control={<GiSettingsKnobs size={24} />}
-        renderItem={(closeMenu, isOpen) => (
-          <Filter closeMenu={closeMenu} isOpen={isOpen} />
+        renderControl={() => <GiSettingsKnobs size={24} />}
+        renderItem={(onClose, isOpen) => (
+          <Filter closeMenu={onClose} isOpen={isOpen} />
         )}
       />
     </div>

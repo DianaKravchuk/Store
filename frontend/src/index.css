@@ -23,7 +23,7 @@ body {
 }
 
 .menu {
-  @apply !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[66px];
+  @apply !w-[160px] !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[66px];
 }
 
 .filter {
