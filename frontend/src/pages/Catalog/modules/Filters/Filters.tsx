@@ -1,12 +1,13 @@
+import { GiSettingsKnobs } from "react-icons/gi";
 import Select from "@/Ui/Select/Select";
 import { SortOptions } from "./data";
 import { useState } from "react";
 import Filter from "../Filter/Filter";
+import MenuComponent from "@/components/MenuComponent/MenuComponent";
 
 const Filters = () => {
   const [sort, setSort] = useState(SortOptions.sort);
   const handleSetSort = (newValue: string) => {
-    console.log(newValue);
     setSort(newValue);
   };
   return (
@@ -20,7 +21,13 @@ const Filters = () => {
           onChange={handleSetSort}
         />
       </div>
-      <Filter />
+      <MenuComponent
+        className="filter"
+        control={<GiSettingsKnobs size={24} />}
+        renderItem={(closeMenu, isOpen) => (
+          <Filter closeMenu={closeMenu} isOpen={isOpen} />
+        )}
+      />
     </div>
   );
 };

@@ -1,14 +1,9 @@
 import Button from "@/Ui/Button/Button";
 import classNames from "classnames";
-import { FC } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-
-export interface FilterTitleProps {
-  title: string;
-  onClose: () => void;
-  onPrev?: () => void;
-}
+import { type FC } from "react";
+import { type FilterTitleProps } from "./types";
 
 const FilterTitle: FC<FilterTitleProps> = ({ onClose, onPrev, title }) => {
   const sectionCN = classNames(

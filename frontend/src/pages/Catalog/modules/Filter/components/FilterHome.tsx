@@ -3,13 +3,9 @@ import { FILTER_DATA } from "../data";
 import FilterTitle from "./FilterTitle";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import FilterControl from "./FilterControl";
-import { FC } from "react";
-export interface FilterHomeProps {
-  onClose: () => void;
-  onOpenFilter: (filter: string) => void;
-  onRemove: () => void;
-  onShow: () => void;
-}
+import { type FC } from "react";
+import { type FilterHomeProps } from "./types";
+
 const FilterHome: FC<FilterHomeProps> = ({
   onClose,
   onOpenFilter,

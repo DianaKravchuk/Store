@@ -1,10 +1,6 @@
 import Button from "@/Ui/Button/Button";
-import { FC } from "react";
-
-export interface FilterControlProps {
-  onShow: () => void;
-  onRemove: () => void;
-}
+import { type FC } from "react";
+import { FilterControlProps } from "./types";
 
 const FilterControl: FC<FilterControlProps> = ({ onRemove, onShow }) => {
   return (
