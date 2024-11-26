@@ -11,7 +11,7 @@ const Filters = () => {
   };
   return (
     <div className="flex justify-between items-center">
-      <div className="w-full max-w-[304px] pl-[28px]">
+      <div className="w-full max-w-[304px]">
         <Select
           placeholder="Sort"
           variant="sort"

@@ -52,7 +52,7 @@ const Select = ({
   });
   const controlCN = classNames("", {
     ["flex !min-h-0"]: variant === "language",
-    ["!cursor-pointer w-fit flex gap-3 text-black-000 text-xs"]:
+    ["!cursor-pointer w-fit flex gap-3 text-black-000 text-xs pl-[28px]"]:
       variant === "sort",
   });
   const placeholderCN = classNames("", {
