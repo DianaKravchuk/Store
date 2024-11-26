@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import classNames from "classnames";
 import Button from "@/Ui/Button/Button";
-import { MenuComponentProps } from "./types";
+import { type MenuComponentProps } from "./types";
 
 const MenuComponent: FC<MenuComponentProps> = ({
-  control,
+  renderControl,
   className,
   renderItem,
 }) => {
@@ -16,7 +16,7 @@ const MenuComponent: FC<MenuComponentProps> = ({
   };
 
   const toggleOpenMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const onClose = () => setIsOpen(false);
 
   const menuClassName = classNames(className, {
     "opacity-1 translate-x-0": isOpen,
@@ -37,12 +37,12 @@ const MenuComponent: FC<MenuComponentProps> = ({
         <Button
           size="icon"
           variant="icon"
-          icon={control}
+          icon={renderControl(onClose, isOpen)}
           onClick={toggleOpenMenu}
         />
       }
     >
-      {renderItem(closeMenu, isOpen)}
+      {renderItem(onClose, isOpen)}
     </Menu>
   );
 };
