@@ -10,6 +10,7 @@ const Button: FC<ButtonProps> = ({
   icon,
   iconPosition = "left",
   textPosition = "center",
+  isActive = false,
   ...props
 }) => {
   const baseStyles =
@@ -48,6 +49,9 @@ const Button: FC<ButtonProps> = ({
     variantStyles[variant],
     textPosition !== "between" && `justify-${textPosition}`,
     className,
+    {
+      ["!bg-white"]: isActive,
+    },
   );
 
   return (

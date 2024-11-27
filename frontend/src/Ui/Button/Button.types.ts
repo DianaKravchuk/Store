@@ -7,6 +7,7 @@ export type Variant =
   | "icon"
   | "pagination"
   | "pagination-active";
+
 export type Sizes =
   | "small"
   | "medium"
@@ -14,6 +15,7 @@ export type Sizes =
   | "full"
   | "icon"
   | "pagination";
+
 export type IconPosition = "left" | "right" | "center";
 export type TextPosition = "start" | "end" | "center" | "between";
 
@@ -23,6 +25,7 @@ export interface ButtonProps
   size: Sizes;
   text?: string;
   icon?: ReactNode;
+  isActive?: boolean;
   iconPosition?: IconPosition;
   textPosition?: TextPosition;
 }
