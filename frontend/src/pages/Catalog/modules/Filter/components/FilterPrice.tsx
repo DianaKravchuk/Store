@@ -21,7 +21,7 @@ const FilterPrice: FC<FilterPriceProps> = ({ price = [20, 25000] }) => {
   };
 
   const inputClassNames = classNames(
-    "input-with-icon  w-full max-w-[60px] text-xl relative px-1",
+    "input-with-icon  w-full max-w-[58px] text-xl relative border-2 border-transparent",
     {
       ["text-red-500 border-2 border-red-500 border-solid rounded-sm"]: isError,
     },
