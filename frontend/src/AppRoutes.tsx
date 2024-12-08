@@ -10,6 +10,8 @@ import Auth from "./pages/Auth";
 import ErrorPage from "./pages/ErrorPage";
 import Account from "./pages/Account";
 import Profile from "@pages/Profile";
+import Catalog from "@pages/Catalog/Catalog";
+import { CATALOG_CATEGORY } from "./pages/Catalog/types";
 import Order from "./pages/Order";
 
 const route = createBrowserRouter(
@@ -20,6 +22,16 @@ const route = createBrowserRouter(
       <Route path="/auth/:authPage?" element={<Auth />} />
       <Route path="/account/:accountPage?" element={<Account />} />
       <Route path="/profile/:profilePage?" element={<Profile />} />
+      <Route path="/man" element={<Catalog page={CATALOG_CATEGORY.MAN} />} />
+      <Route path="/boys" element={<Catalog page={CATALOG_CATEGORY.BOYS} />} />
+      <Route
+        path="/woman"
+        element={<Catalog page={CATALOG_CATEGORY.WOMAN} />}
+      />
+      <Route
+        path="/girls"
+        element={<Catalog page={CATALOG_CATEGORY.GIRLS} />}
+      />
       <Route path="/account/orders/order" element={<Order />} />
     </Route>,
   ),

@@ -23,7 +23,11 @@ body {
 }
 
 .menu {
-  @apply !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[66px];
+  @apply !w-[160px] !right-3 !h-[308px] md:!right-[clamp(12px,-210px+28.906vw,86px)] lg:!right-[clamp(142px,-10px+14.844vw,180px)] lg:!top-[66px];
+}
+
+.filter {
+  @apply !right-0 !top-0 !w-[320px] md:!w-[clamp(320px,27.714px+39.286vw,430px)];
 }
 
 .bm-burger-button {
@@ -49,4 +53,18 @@ body {
 /* Modal */
 .react-responsive-modal-modal {
   @apply m-0 p-0;
+}
+
+/* Price Filter */
+.track {
+  @apply h-[5px] rounded-lg;
+}
+
+.track:nth-of-type(1),
+.track:nth-of-type(3) {
+  @apply bg-grey-001;
+}
+
+.track:nth-of-type(2) {
+  @apply bg-black-000;
 }
