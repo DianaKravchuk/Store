@@ -11,7 +11,8 @@ To install the required dependencies and run the application, follow these steps
 # SSH
     git clone git@github.com:DianaKravchuk/Store.git
 
-   cd Store
+   cd store_backend
+ 
 ```
 
 2. Create and activate a virtual environment:
